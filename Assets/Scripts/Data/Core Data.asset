@@ -1,0 +1,1905 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c6b7b03345b92e4baaebb497235f779, type: 3}
+  m_Name: Core Data
+  m_EditorClassIdentifier: 
+  characterStates:
+  - stateName: Neutral
+    index: 0
+    length: 60
+    loop: 1
+    blendRate: 0.1
+    events:
+    - start: 0
+      end: 60
+      active: 1
+      script: 3
+      parameters:
+      - name: Rate
+        val: 1
+    - start: 0
+      end: 60
+      active: 1
+      script: 6
+      parameters:
+      - name: 
+        val: 1
+    attacks: []
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: Jump
+    index: 0
+    length: 5
+    loop: 0
+    blendRate: 0.1
+    events:
+    - start: 2
+      end: 2
+      active: 1
+      script: 7
+      parameters:
+      - name: Pow
+        val: 1
+    - start: 0
+      end: 5
+      active: 1
+      script: 3
+      parameters:
+      - name: 
+        val: 8
+    - start: 0
+      end: 5
+      active: 1
+      script: 6
+      parameters:
+      - name: 
+        val: 1
+    - start: 2
+      end: 2
+      active: 1
+      script: 14
+      parameters:
+      - name: Jump
+        val: 0
+    attacks: []
+    jumpReq: 1
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 1
+    wallReq: 0
+  - stateName: Dash
+    index: 0
+    length: 30
+    loop: 0
+    blendRate: 0.1
+    events:
+    - start: 0
+      end: 30
+      active: 1
+      script: 3
+      parameters:
+      - name: 
+        val: 2
+    - start: 0
+      end: 0
+      active: 1
+      script: 11
+      parameters:
+      - name: Dash
+        val: 0
+    attacks: []
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 10
+    groundedReq: 0
+    wallReq: 1
+  - stateName: HitStun
+    index: 0
+    length: 10
+    loop: 1
+    blendRate: 0.1
+    events:
+    - start: 0
+      end: 10
+      active: 1
+      script: 4
+      parameters: []
+    attacks: []
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: Death
+    index: 0
+    length: 120
+    loop: 0
+    blendRate: 0.1
+    events: []
+    attacks: []
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: Slash
+    index: 0
+    length: 25
+    loop: 0
+    blendRate: 0.1
+    events:
+    - start: 5
+      end: 5
+      active: 1
+      script: 11
+      parameters:
+      - name: Swing
+        val: 0
+    - start: 0
+      end: 10
+      active: 1
+      script: 1
+      parameters:
+      - name: 
+        val: 0
+    - start: 5
+      end: 20
+      active: 1
+      script: 3
+      parameters:
+      - name: 
+        val: 0.5
+    - start: 15
+      end: 25
+      active: 1
+      script: 6
+      parameters:
+      - name: 
+        val: 1
+    attacks:
+    - start: 5
+      length: 5
+      hitStun: 20
+      hitStop: 10
+      damage: 1
+      meterGain: 5
+      comboValue: 0
+      poiseDamage: 0
+      attackType: 0
+      hitAnim: {x: 0, y: 0}
+      knockback: {x: 10, y: 10, z: 0}
+      hitBoxPos: {x: 0, y: -1, z: 0}
+      hitBoxScale: {x: 2, y: 2, z: 1}
+      cancelWindow: 0
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: HeavySlash
+    index: 0
+    length: 25
+    loop: 0
+    blendRate: 0.1
+    events:
+    - start: 5
+      end: 5
+      active: 1
+      script: 11
+      parameters:
+      - name: Swing
+        val: 0
+    - start: 0
+      end: 10
+      active: 1
+      script: 1
+      parameters:
+      - name: 
+        val: 0
+    - start: 5
+      end: 20
+      active: 1
+      script: 3
+      parameters:
+      - name: 
+        val: 0.5
+    - start: 15
+      end: 25
+      active: 1
+      script: 6
+      parameters:
+      - name: 
+        val: 1
+    attacks:
+    - start: 5
+      length: 5
+      hitStun: 20
+      hitStop: 10
+      damage: 1
+      meterGain: 5
+      comboValue: 0
+      poiseDamage: 2
+      attackType: 0
+      hitAnim: {x: 0, y: 0}
+      knockback: {x: 20, y: 20, z: 0}
+      hitBoxPos: {x: 0, y: -1, z: 0}
+      hitBoxScale: {x: 2, y: 2, z: 1}
+      cancelWindow: 0
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: Shuriken
+    index: 0
+    length: 15
+    loop: 0
+    blendRate: 0.1
+    events:
+    - start: 5
+      end: 5
+      active: 1
+      script: 7
+      parameters:
+      - name: 
+        val: 25
+    - start: 5
+      end: 5
+      active: 1
+      script: 11
+      parameters:
+      - name: FireShot
+        val: 0
+    - start: 7
+      end: 17
+      active: 1
+      script: 1
+      parameters:
+      - name: 
+        val: 0
+    - start: 5
+      end: 5
+      active: 1
+      script: 12
+      parameters:
+      - name: 
+        val: 1
+      - name: 
+        val: 0.1
+    - start: 0
+      end: 4
+      active: 1
+      script: 3
+      parameters:
+      - name: 
+        val: 0.5
+    - start: 20
+      end: 40
+      active: 1
+      script: 3
+      parameters:
+      - name: 
+        val: 0.5
+    attacks:
+    - start: 0
+      length: 0
+      hitStun: 20
+      hitStop: 5
+      damage: 3
+      meterGain: 0
+      comboValue: 0
+      poiseDamage: 0
+      attackType: 0
+      hitAnim: {x: 0, y: 0}
+      knockback: {x: 20, y: 20, z: 0}
+      hitBoxPos: {x: 0, y: 0, z: 0}
+      hitBoxScale: {x: 0, y: 0, z: 0}
+      cancelWindow: 0
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: Cast
+    index: 0
+    length: 25
+    loop: 0
+    blendRate: 0.1
+    events:
+    - start: 5
+      end: 5
+      active: 1
+      script: 13
+      parameters:
+      - name: 
+        val: 1
+    - start: 0
+      end: 0
+      active: 1
+      script: 1
+      parameters:
+      - name: 
+        val: 0
+    attacks: []
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: Ninjutsu
+    index: 0
+    length: 25
+    loop: 0
+    blendRate: 0.1
+    events:
+    - start: 5
+      end: 5
+      active: 1
+      script: 13
+      parameters:
+      - name: 
+        val: 1
+    - start: 6
+      end: 6
+      active: 1
+      script: 14
+      parameters:
+      - name: 
+        val: 1
+    - start: 0
+      end: 0
+      active: 1
+      script: 1
+      parameters:
+      - name: 
+        val: 0
+    attacks: []
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: Flame
+    index: 0
+    length: 20
+    loop: 0
+    blendRate: 0.1
+    events:
+    - start: 10
+      end: 10
+      active: 1
+      script: 10
+      parameters:
+      - name: 
+        val: 0
+      - name: 
+        val: 1
+      - name: 
+        val: 20
+      - name: 
+        val: 0
+      - name: 
+        val: 0
+    - start: 0
+      end: 5
+      active: 1
+      script: 1
+      parameters:
+      - name: 
+        val: 0
+    attacks:
+    - start: 0
+      length: 0
+      hitStun: 30
+      hitStop: 5
+      damage: 2
+      meterGain: 0
+      comboValue: 0
+      poiseDamage: 5
+      attackType: 0
+      hitAnim: {x: 0, y: 0}
+      knockback: {x: 30, y: 30, z: 0}
+      hitBoxPos: {x: 0, y: 0, z: 0}
+      hitBoxScale: {x: 0, y: 0, z: 0}
+      cancelWindow: 0
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: Thunder
+    index: 0
+    length: 20
+    loop: 0
+    blendRate: 0.1
+    events:
+    - start: 10
+      end: 10
+      active: 1
+      script: 10
+      parameters:
+      - name: 
+        val: 1
+      - name: 
+        val: 1
+      - name: 
+        val: 40
+      - name: 
+        val: 0
+      - name: 
+        val: 0
+    - start: 0
+      end: 5
+      active: 1
+      script: 1
+      parameters:
+      - name: 
+        val: 0
+    attacks:
+    - start: 0
+      length: 0
+      hitStun: 30
+      hitStop: 5
+      damage: 2
+      meterGain: 0
+      comboValue: 0
+      poiseDamage: 5
+      attackType: 0
+      hitAnim: {x: 0, y: 0}
+      knockback: {x: 30, y: 30, z: 0}
+      hitBoxPos: {x: 0, y: 0, z: 0}
+      hitBoxScale: {x: 0, y: 0, z: 0}
+      cancelWindow: 0
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: Blizzard
+    index: 0
+    length: 20
+    loop: 0
+    blendRate: 0.1
+    events:
+    - start: 10
+      end: 10
+      active: 1
+      script: 10
+      parameters:
+      - name: 
+        val: 2
+      - name: 
+        val: 1
+      - name: 
+        val: 200
+      - name: 
+        val: 0
+      - name: 
+        val: 0
+    - start: 0
+      end: 5
+      active: 1
+      script: 1
+      parameters:
+      - name: 
+        val: 0
+    attacks:
+    - start: 0
+      length: 0
+      hitStun: 30
+      hitStop: 5
+      damage: 2
+      meterGain: 0
+      comboValue: 0
+      poiseDamage: 5
+      attackType: 0
+      hitAnim: {x: 0, y: 0}
+      knockback: {x: 30, y: 30, z: 0}
+      hitBoxPos: {x: 0, y: 0, z: 0}
+      hitBoxScale: {x: 0, y: 0, z: 0}
+      cancelWindow: 0
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: NEWSTATE
+    index: 0
+    length: 20
+    loop: 0
+    blendRate: 0.1
+    events: []
+    attacks: []
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: NEWSTATE
+    index: 0
+    length: 20
+    loop: 0
+    blendRate: 0.1
+    events: []
+    attacks: []
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: NEWSTATE
+    index: 0
+    length: 20
+    loop: 0
+    blendRate: 0.1
+    events: []
+    attacks: []
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: NEWSTATE
+    index: 0
+    length: 20
+    loop: 0
+    blendRate: 0.1
+    events: []
+    attacks: []
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: NEWSTATE
+    index: 0
+    length: 20
+    loop: 0
+    blendRate: 0.1
+    events: []
+    attacks: []
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: NEWSTATE
+    index: 0
+    length: 20
+    loop: 0
+    blendRate: 0.1
+    events: []
+    attacks: []
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: NEWSTATE
+    index: 0
+    length: 20
+    loop: 0
+    blendRate: 0.1
+    events: []
+    attacks: []
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: NEWSTATE
+    index: 0
+    length: 20
+    loop: 0
+    blendRate: 0.1
+    events: []
+    attacks: []
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: BatShout
+    index: 0
+    length: 55
+    loop: 0
+    blendRate: 0.1
+    events:
+    - start: 0
+      end: 60
+      active: 1
+      script: 1
+      parameters:
+      - name: 
+        val: 0
+    - start: 10
+      end: 10
+      active: 1
+      script: 11
+      parameters:
+      - name: 
+        val: 0
+    - start: 10
+      end: 10
+      active: 1
+      script: 11
+      parameters:
+      - name: EnemyAttack
+        val: 0
+    attacks:
+    - start: 15
+      length: 15
+      hitStun: 20
+      hitStop: 5
+      damage: 2
+      meterGain: 0
+      comboValue: 0
+      poiseDamage: 0
+      attackType: 0
+      hitAnim: {x: 0, y: 0}
+      knockback: {x: 3, y: 3, z: 0}
+      hitBoxPos: {x: 0, y: 0, z: 0}
+      hitBoxScale: {x: 3, y: 3, z: 1}
+      cancelWindow: 0
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: SuperBatShout
+    index: 0
+    length: 55
+    loop: 0
+    blendRate: 0.1
+    events:
+    - start: 0
+      end: 60
+      active: 1
+      script: 1
+      parameters:
+      - name: 
+        val: 0
+    - start: 10
+      end: 10
+      active: 1
+      script: 9
+      parameters:
+      - name: 
+        val: 0
+      - name: 
+        val: 8
+      - name: 
+        val: 4
+      - name: 
+        val: 0
+      - name: 
+        val: -1
+      - name: 
+        val: 0
+      - name: 
+        val: 360
+      - name: 
+        val: 0
+    - start: 10
+      end: 10
+      active: 1
+      script: 11
+      parameters:
+      - name: EnemyAttack2
+        val: 0
+    attacks:
+    - start: 15
+      length: 15
+      hitStun: 20
+      hitStop: 5
+      damage: 2
+      meterGain: 0
+      comboValue: 0
+      poiseDamage: 0
+      attackType: 0
+      hitAnim: {x: 0, y: 0}
+      knockback: {x: 3, y: 3, z: 0}
+      hitBoxPos: {x: 0, y: 0, z: 0}
+      hitBoxScale: {x: 3, y: 3, z: 1}
+      cancelWindow: 0
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  characterScripts:
+  - index: 0
+    name: VelocityY
+    parameters:
+    - name: Pow
+      val: 1
+  - index: 0
+    name: Front Velocity
+    parameters:
+    - name: Rate
+      val: 0
+  - index: 0
+    name: Velocity XZ
+    parameters:
+    - name: Rate
+      val: 0
+  - index: 0
+    name: StickMove
+    parameters:
+    - name: Rate
+      val: 1
+  - index: 0
+    name: GettingHit
+    parameters: []
+  - index: 0
+    name: GlobalPrefab
+    parameters:
+    - name: Position X
+      val: 0
+    - name: Position Y
+      val: 0
+    - name: Position Z
+      val: 0
+    - name: Rotation X
+      val: 0
+    - name: Rotation Y
+      val: 0
+    - name: Rotation Z
+      val: 0
+    - name: Scale X
+      val: 1
+    - name: Scale Y
+      val: 1
+    - name: Scale Z
+      val: 1
+    - name: Speed
+      val: 0
+    - name: Index
+      val: 1
+  - index: 0
+    name: CanCancel
+    parameters:
+    - name: Bool
+      val: 1
+  - index: 0
+    name: Shuriken
+    parameters:
+    - name: Pow
+      val: 1
+  - index: 0
+    name: FaceStick
+    parameters:
+    - name: Rate
+      val: 1
+  - index: 0
+    name: FireBullet
+    parameters:
+    - name: Bullet Index
+      val: 0
+    - name: Number Of Bullets
+      val: 1
+    - name: Bullet Speed
+      val: 20
+    - name: VelX
+      val: 1
+    - name: VelY
+      val: 0
+    - name: MinRot
+      val: 0
+    - name: MaxRot
+      val: 0
+    - name: IsRandom
+      val: 0
+  - index: 0
+    name: FireArrow
+    parameters:
+    - name: Bullet Index
+      val: 0
+    - name: Number Of Bullets
+      val: 1
+    - name: Bullet Speed
+      val: 20
+    - name: MinRot
+      val: 0
+    - name: MaxRot
+      val: 0
+  - index: 0
+    name: PlayAudio
+    parameters:
+    - name: EnemyAttack
+      val: 0
+  - index: 0
+    name: Screenshake
+    parameters:
+    - name: Intensity
+      val: 1
+    - name: Time
+      val: 0
+  - index: 0
+    name: ToggleForm
+    parameters:
+    - name: Index
+      val: 0
+  - index: 0
+    name: ChangeFormToToggle
+    parameters:
+    - name: Index
+      val: 0
+  - index: 0
+    name: SpawnTurret
+    parameters:
+    - name: turretIndex
+      val: 3
+  - index: 0
+    name: AngledBullet
+    parameters:
+    - name: Index
+      val: 0
+    - name: Speed
+      val: 10
+    - name: PosX
+      val: 1
+    - name: PosY
+      val: 1
+    - name: AttackIndex
+      val: 0
+    - name: Rotation
+      val: 0
+  - index: 0
+    name: Henshin
+    parameters:
+    - name: Form Index
+      val: 0
+  moveLists:
+  - name: Shuriken
+    commandStates:
+    - stateName: Grounded
+      aerial: 0
+      explicitState: 0
+      state: 0
+      commandSteps:
+      - idIndex: 0
+        command:
+          motionCommand: 0
+          input: 0
+          state: 0
+          inputs: 
+        followUps: 01000000030000000400000005000000
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 68
+          y: 41
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 1
+        command:
+          motionCommand: 0
+          input: 1
+          state: 5
+          inputs: 
+        followUps: 02000000
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 50
+          y: 50
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 2
+        command:
+          motionCommand: 0
+          input: 1
+          state: 6
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 280
+          y: 81
+          width: 175
+          height: 50
+        activated: 1
+        priority: 1
+      - idIndex: 3
+        command:
+          motionCommand: 0
+          input: 3
+          state: 7
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 51
+          y: 180
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 4
+        command:
+          motionCommand: 0
+          input: 2
+          state: 8
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 258
+          y: 172
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 5
+        command:
+          motionCommand: 0
+          input: 0
+          state: 2
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 553
+          y: 81
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      omitList: 02000000
+      nextFollowups: 01000000030000000400000005000000
+    - stateName: Aerial
+      aerial: 1
+      explicitState: 0
+      state: 0
+      commandSteps:
+      - idIndex: 0
+        command:
+          motionCommand: 0
+          input: 0
+          state: 0
+          inputs: 
+        followUps: 01000000020000000300000004000000
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 50
+          y: 50
+          width: 200
+          height: 200
+        activated: 1
+        priority: 0
+      - idIndex: 1
+        command:
+          motionCommand: 0
+          input: 4
+          state: 2
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 50
+          y: 50
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 2
+        command:
+          motionCommand: 0
+          input: 0
+          state: 2
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 301
+          y: 36
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 3
+        command:
+          motionCommand: 0
+          input: 0
+          state: 9
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 63
+          y: 157
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 4
+        command:
+          motionCommand: 0
+          input: 4
+          state: 9
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 295
+          y: 148
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      omitList: 
+      nextFollowups: 01000000020000000300000004000000
+  - name: Flame
+    commandStates:
+    - stateName: Grounded
+      aerial: 0
+      explicitState: 0
+      state: 0
+      commandSteps:
+      - idIndex: 0
+        command:
+          motionCommand: 0
+          input: 0
+          state: 0
+          inputs: 
+        followUps: 01000000040000000500000006000000
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 68
+          y: 41
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 1
+        command:
+          motionCommand: 0
+          input: 1
+          state: 10
+          inputs: 
+        followUps: 02000000
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 50
+          y: 50
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 2
+        command:
+          motionCommand: 0
+          input: 1
+          state: 10
+          inputs: 
+        followUps: 03000000
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 280
+          y: 81
+          width: 175
+          height: 50
+        activated: 1
+        priority: 1
+      - idIndex: 3
+        command:
+          motionCommand: 0
+          input: 1
+          state: 10
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 487
+          y: 104
+          width: 175
+          height: 50
+        activated: 1
+        priority: 2
+      - idIndex: 4
+        command:
+          motionCommand: 0
+          input: 3
+          state: 7
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 61
+          y: 189
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 5
+        command:
+          motionCommand: 0
+          input: 2
+          state: 9
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 309
+          y: 198
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 6
+        command:
+          motionCommand: 0
+          input: 0
+          state: 2
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 103
+          y: 115
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      omitList: 0200000003000000
+      nextFollowups: 01000000040000000500000006000000
+    - stateName: Aerial
+      aerial: 1
+      explicitState: 0
+      state: 0
+      commandSteps:
+      - idIndex: 0
+        command:
+          motionCommand: 0
+          input: 0
+          state: 0
+          inputs: 
+        followUps: 01000000020000000300000004000000
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 50
+          y: 50
+          width: 200
+          height: 200
+        activated: 1
+        priority: 0
+      - idIndex: 1
+        command:
+          motionCommand: 0
+          input: 4
+          state: 2
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 50
+          y: 50
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 2
+        command:
+          motionCommand: 0
+          input: 0
+          state: 2
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 301
+          y: 36
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 3
+        command:
+          motionCommand: 0
+          input: 0
+          state: 9
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 63
+          y: 157
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 4
+        command:
+          motionCommand: 0
+          input: 4
+          state: 9
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 295
+          y: 148
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      omitList: 
+      nextFollowups: 01000000020000000300000004000000
+  - name: Thunder
+    commandStates:
+    - stateName: Grounded
+      aerial: 0
+      explicitState: 0
+      state: 0
+      commandSteps:
+      - idIndex: 0
+        command:
+          motionCommand: 0
+          input: 0
+          state: 0
+          inputs: 
+        followUps: 01000000040000000500000006000000
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 68
+          y: 41
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 1
+        command:
+          motionCommand: 0
+          input: 1
+          state: 11
+          inputs: 
+        followUps: 02000000
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 50
+          y: 50
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 2
+        command:
+          motionCommand: 0
+          input: 1
+          state: 11
+          inputs: 
+        followUps: 03000000
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 280
+          y: 81
+          width: 175
+          height: 50
+        activated: 1
+        priority: 1
+      - idIndex: 3
+        command:
+          motionCommand: 0
+          input: 1
+          state: 11
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 487
+          y: 104
+          width: 175
+          height: 50
+        activated: 1
+        priority: 2
+      - idIndex: 4
+        command:
+          motionCommand: 0
+          input: 3
+          state: 7
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 61
+          y: 189
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 5
+        command:
+          motionCommand: 0
+          input: 2
+          state: 9
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 302
+          y: 190
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 6
+        command:
+          motionCommand: 0
+          input: 0
+          state: 2
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 81
+          y: 115
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      omitList: 0200000003000000
+      nextFollowups: 01000000040000000500000006000000
+    - stateName: Aerial
+      aerial: 1
+      explicitState: 0
+      state: 0
+      commandSteps:
+      - idIndex: 0
+        command:
+          motionCommand: 0
+          input: 0
+          state: 0
+          inputs: 
+        followUps: 01000000020000000300000004000000
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 50
+          y: 50
+          width: 200
+          height: 200
+        activated: 1
+        priority: 0
+      - idIndex: 1
+        command:
+          motionCommand: 0
+          input: 4
+          state: 2
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 50
+          y: 50
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 2
+        command:
+          motionCommand: 0
+          input: 0
+          state: 2
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 301
+          y: 36
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 3
+        command:
+          motionCommand: 0
+          input: 0
+          state: 9
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 63
+          y: 157
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 4
+        command:
+          motionCommand: 0
+          input: 4
+          state: 9
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 295
+          y: 148
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      omitList: 
+      nextFollowups: 01000000020000000300000004000000
+  - name: Blizzard
+    commandStates:
+    - stateName: Grounded
+      aerial: 0
+      explicitState: 0
+      state: 0
+      commandSteps:
+      - idIndex: 0
+        command:
+          motionCommand: 0
+          input: 0
+          state: 0
+          inputs: 
+        followUps: 01000000040000000500000006000000
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 68
+          y: 41
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 1
+        command:
+          motionCommand: 0
+          input: 1
+          state: 12
+          inputs: 
+        followUps: 02000000
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 50
+          y: 50
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 2
+        command:
+          motionCommand: 0
+          input: 1
+          state: 12
+          inputs: 
+        followUps: 03000000
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 280
+          y: 81
+          width: 175
+          height: 50
+        activated: 1
+        priority: 1
+      - idIndex: 3
+        command:
+          motionCommand: 0
+          input: 1
+          state: 12
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 487
+          y: 104
+          width: 175
+          height: 50
+        activated: 1
+        priority: 2
+      - idIndex: 4
+        command:
+          motionCommand: 0
+          input: 3
+          state: 7
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 61
+          y: 189
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 5
+        command:
+          motionCommand: 0
+          input: 2
+          state: 9
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 291
+          y: 185
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 6
+        command:
+          motionCommand: 0
+          input: 0
+          state: 2
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 88
+          y: 118
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      omitList: 0200000003000000
+      nextFollowups: 01000000040000000500000006000000
+    - stateName: Aerial
+      aerial: 1
+      explicitState: 0
+      state: 0
+      commandSteps:
+      - idIndex: 0
+        command:
+          motionCommand: 0
+          input: 0
+          state: 0
+          inputs: 
+        followUps: 01000000020000000300000004000000
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 50
+          y: 50
+          width: 200
+          height: 200
+        activated: 1
+        priority: 0
+      - idIndex: 1
+        command:
+          motionCommand: 0
+          input: 4
+          state: 2
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 50
+          y: 50
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 2
+        command:
+          motionCommand: 0
+          input: 0
+          state: 2
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 301
+          y: 36
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 3
+        command:
+          motionCommand: 0
+          input: 0
+          state: 9
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 63
+          y: 157
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 4
+        command:
+          motionCommand: 0
+          input: 4
+          state: 9
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 295
+          y: 148
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      omitList: 
+      nextFollowups: 01000000020000000300000004000000
+  globalPrefabs: []
+  rawInputs:
+  - inputType: 0
+    name: Ps4X
+  - inputType: 0
+    name: Ps4Square
+  - inputType: 0
+    name: Ps4O
+  - inputType: 0
+    name: Ps4Triangle
+  - inputType: 0
+    name: Ps4L1
+  - inputType: 0
+    name: Ps4R1
+  - inputType: 0
+    name: Ps4L2
+  - inputType: 0
+    name: Ps4R2
+  - inputType: 0
+    name: Ps4Options
+  - inputType: 0
+    name: Ps4Share
+  - inputType: 0
+    name: Ps4Touchpad
+  - inputType: 1
+    name: Ps4Horizontal
+  - inputType: 1
+    name: Ps4Vertical
+  - inputType: 1
+    name: altPs4Horizontal
+  - inputType: 1
+    name: altPs4Vertical
+  - inputType: 1
+    name: Ps4HorizontalR
+  - inputType: 1
+    name: Ps4VerticalR
+  - inputType: 4
+    name: IGNORE
+  ps4Inputs:
+  - inputType: 0
+    name: Ps4X
+  - inputType: 0
+    name: Ps4Square
+  - inputType: 0
+    name: Ps4O
+  - inputType: 0
+    name: Ps4Triangle
+  - inputType: 0
+    name: Ps4L1
+  - inputType: 0
+    name: Ps4R1
+  - inputType: 0
+    name: Ps4L2
+  - inputType: 0
+    name: Ps4R2
+  - inputType: 0
+    name: Ps4Options
+  - inputType: 0
+    name: Ps4Share
+  - inputType: 0
+    name: Ps4Touchpad
+  - inputType: 1
+    name: Ps4Horizontal
+  - inputType: 1
+    name: Ps4Vertical
+  - inputType: 1
+    name: altPs4Horizontal
+  - inputType: 1
+    name: altPs4Vertical
+  - inputType: 1
+    name: Ps4HorizontalR
+  - inputType: 1
+    name: Ps4VerticalR
+  - inputType: 4
+    name: IGNORE
+  xboxInputs:
+  - inputType: 0
+    name: XboxA
+  - inputType: 0
+    name: XboxX
+  - inputType: 0
+    name: XboxB
+  - inputType: 0
+    name: XboxY
+  - inputType: 0
+    name: XboxLB
+  - inputType: 0
+    name: XboxRB
+  - inputType: 0
+    name: XboxLT
+  - inputType: 0
+    name: XboxRT
+  - inputType: 0
+    name: XboxMenu
+  - inputType: 0
+    name: XboxBack
+  - inputType: 0
+    name: XboxTouchpad
+  - inputType: 1
+    name: XboxHorizontal
+  - inputType: 1
+    name: XboxVertical
+  - inputType: 1
+    name: altXboxHorizontal
+  - inputType: 1
+    name: altXboxVertical
+  - inputType: 1
+    name: XboxHorizontalR
+  - inputType: 1
+    name: XboxVerticalR
+  - inputType: 4
+    name: IGNORE
+  keyboardInputs:
+  - inputType: 0
+    name: KeyboardSpace
+  - inputType: 0
+    name: KeyboardF
+  - inputType: 0
+    name: KeyboardLeftShift
+  - inputType: 0
+    name: KeyboardE
+  - inputType: 0
+    name: KeyboardLeftCtrl
+  - inputType: 0
+    name: KeyboardQ
+  - inputType: 0
+    name: KeyboardX
+  - inputType: 0
+    name: KeyboardX
+  - inputType: 0
+    name: KeyboardP
+  - inputType: 0
+    name: KeyboardBackspace
+  - inputType: 0
+    name: KeyboardX
+  - inputType: 1
+    name: KeyboardHorizontal
+  - inputType: 1
+    name: KeyboardVertical
+  - inputType: 0
+    name: KeyboardHorizontal
+  - inputType: 0
+    name: KeyboardVertical
+  - inputType: 1
+    name: Mouse X
+  - inputType: 1
+    name: Mouse Y
+  - inputType: 4
+    name: IGNORE
+  motionCommands:
+  - name: None
+    motionWindow: 0
+    confirmWindow: 0
+    commands: 
+    clean: 0
+    anyOrder: 0
+    checkStep: 0
+    angleChange: 0
+    prevAngle: 0
+    curAngle: 0
+  - name: '>>'
+    motionWindow: 0
+    confirmWindow: 0
+    commands: 00000000030000000000000003000000
+    clean: 0
+    anyOrder: 0
+    checkStep: 1
+    angleChange: 0
+    prevAngle: 0
+    curAngle: 0
+  - name: '>'
+    motionWindow: 0
+    confirmWindow: 0
+    commands: 0000000003000000
+    clean: 0
+    anyOrder: 0
+    checkStep: 1
+    angleChange: 0
+    prevAngle: 0
+    curAngle: 0
+  - name: ^
+    motionWindow: 0
+    confirmWindow: 0
+    commands: 0000000001000000
+    clean: 0
+    anyOrder: 0
+    checkStep: 1
+    angleChange: 0
+    prevAngle: 0
+    curAngle: 0
+  - name: V
+    motionWindow: 0
+    confirmWindow: 0
+    commands: 0000000002000000
+    clean: 0
+    anyOrder: 0
+    checkStep: 1
+    angleChange: 0
+    prevAngle: 0
+    curAngle: 0
+  currentMovelistIndex: 3

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a1c4b5f6c6df7468dada4912849fa8, type: 3}
+  m_Name: Blizzard
+  m_EditorClassIdentifier: 
+  damageEffect: {fileID: 8429325931262943744, guid: e7abc560fc926c54da452d50fd0b12d4,
+    type: 3}
+  soundEffect: Blizzard

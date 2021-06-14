@@ -1,0 +1,303 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5212399024888041632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5212399024888041638}
+  - component: {fileID: 5212399024888041639}
+  - component: {fileID: 5212399024888041637}
+  m_Layer: 0
+  m_Name: AudioManagerObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5212399024888041638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5212399024888041632}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.24286257, y: 0.14691395, z: -110.478516}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5212399024888041639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5212399024888041632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c20d69657b1ef004ea83eece12ffb6c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: ButtonClick
+    clip: {fileID: 8300000, guid: c7a272c0bc209f44fa1ef3bd57dd5cbc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: ButtonHover
+    clip: {fileID: 8300000, guid: 59dde04c91a36fb4bb2a360a9034244e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: HitRock
+    clip: {fileID: 8300000, guid: 18b24c0219a19f14ea1d7f696624bf25, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: Dash
+    clip: {fileID: 8300000, guid: a8e3ea1a6b2aecd40af6069795102149, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: RockBreak2
+    clip: {fileID: 8300000, guid: 7e9183491d9f32e40998f41bb477979a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: Swing
+    clip: {fileID: 8300000, guid: 21808301bbef1114b8221d7e2fde85f0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: OpenDoor
+    clip: {fileID: 8300000, guid: 9161afe29f99aff45a33b0afd1d5318f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: OpenDoor2
+    clip: {fileID: 8300000, guid: 3518fba5f6e3f9a42a003ad2866e4712, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: RockBreak3
+    clip: {fileID: 8300000, guid: 90226f6eec505a34caf6cba7ffc2994d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: OpenDoor3
+    clip: {fileID: 8300000, guid: ffaa954cd27c4d044a9a85cd76a81054, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: Gem
+    clip: {fileID: 8300000, guid: 105e395c30b64bf42a30291f6f385442, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: ChestOpen
+    clip: {fileID: 8300000, guid: 0dac09e9e58d7f94585c81f079acfaa5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: HealthPickup
+    clip: {fileID: 8300000, guid: 23e157deb72aebc47b1021c3555c653f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: EnemyDeath
+    clip: {fileID: 8300000, guid: 28887db6be9abb445b59ac8811fe8b45, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: Ore
+    clip: {fileID: 8300000, guid: 6c5fc8ef4cc37f54f9ea2024fa82f001, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: Locked
+    clip: {fileID: 8300000, guid: ace7a4a1c3228df498a256f1cb73ce88, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: EnemyAttack
+    clip: {fileID: 8300000, guid: 4be1e0f904d7e6a4f84f6a91e4dc657a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+  - name: EnemyAttack2
+    clip: {fileID: 8300000, guid: 4be1e0f904d7e6a4f84f6a91e4dc657a, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+  - name: Slash
+    clip: {fileID: 8300000, guid: 2686b4c74404bb24c9532a563f1abe5b, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+  - name: FireShot
+    clip: {fileID: 8300000, guid: beea004786c1d7843a79896593c57b2d, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+  - name: EnemyAlert
+    clip: {fileID: 8300000, guid: 9a8d6d80f197a9245be26f30b23b79e4, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+  - name: HitEnemy
+    clip: {fileID: 8300000, guid: ccf471416f50ce7428e1ed5814f98e6b, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+  - name: HitPlayer
+    clip: {fileID: 8300000, guid: ed7cb9afe00cf5e4890a7a836fac73aa, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+  - name: KillEnemy
+    clip: {fileID: 8300000, guid: 24b29858cbb26414c97963b63a94bcb1, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+  - name: Bullet
+    clip: {fileID: 8300000, guid: 7116cf9da81747b43a5d4be22a146b15, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+  - name: Buster
+    clip: {fileID: 8300000, guid: acb9733fe0bd5a14da5541e8d8e8a85f, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+  - name: Bomb
+    clip: {fileID: 8300000, guid: a3035cd762d844c4fae49dc549983cb6, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+  - name: Shuriken
+    clip: {fileID: 8300000, guid: 7b6076216382a504d879650b63cf5fbc, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+  - name: Flame
+    clip: {fileID: 8300000, guid: 3c99fd91811b2e848a194717b73d8a82, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+  - name: Thunder
+    clip: {fileID: 8300000, guid: 68b4f9547b042b94895d6a643d8ebff1, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+  - name: Blizzard
+    clip: {fileID: 8300000, guid: 87510b623ff5a304c8c4cdc77b3b082d, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+  - name: Cast
+    clip: {fileID: 8300000, guid: 7b6076216382a504d879650b63cf5fbc, type: 3}
+    volume: 1
+    pitch: 0.5
+    loop: 0
+--- !u!82 &5212399024888041637
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5212399024888041632}
+  m_Enabled: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

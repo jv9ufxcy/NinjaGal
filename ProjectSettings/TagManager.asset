@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - RockSpawnPoint
+  - Score
+  - PlayerSpawn
+  - Enemy
+  - ChestSpawn
+  - KeyText
+  - DeathPanel
+  - MusicObject
+  - Door
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Background
+  - Player
+  - Enemy
+  - FlyingEnemy
+  - Rock
+  - Projectile
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Ground
+    uniqueID: 3513924809
+    locked: 0
+  - name: BackgroundEffects
+    uniqueID: 279969825
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Actor
+    uniqueID: 2950815023
+    locked: 0
+  - name: Items
+    uniqueID: 1720484181
+    locked: 0
+  - name: Effects
+    uniqueID: 1743821407
+    locked: 0
+  - name: UI
+    uniqueID: 304634853
+    locked: 0
