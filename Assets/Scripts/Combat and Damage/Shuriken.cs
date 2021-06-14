@@ -7,17 +7,24 @@ public class Shuriken : MonoBehaviour
     public CharacterObject player, target;
     private enum State { Equipped,Thrown,Recalling,Hooked}
     private State state;
+    private Animator anim;
     private Rigidbody2D rb;
     private TrailRenderer tr;
     private SpriteRenderer sr;
     public float recallSpeed = 15f, grabDist=2f;
     public float timerMax = 120f, timer=0f;
+    private AudioManager audioManager;
     private void Awake()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<TrailRenderer>();
         sr = GetComponent<SpriteRenderer>();
         state = State.Recalling;
+    }
+    private void Start()
+    {
+        audioManager = AudioManager.instance;
     }
     private void FixedUpdate()
     {
@@ -51,6 +58,7 @@ public class Shuriken : MonoBehaviour
             state = State.Equipped;
             rb.velocity = Vector2.zero;
             rb.isKinematic = true;
+            audioManager.PlaySound("ButtonClick");
             player.QuickChangeForm(0);
         }
     }
@@ -60,17 +68,22 @@ public class Shuriken : MonoBehaviour
         switch (state)
         {
             case State.Equipped:
+                anim.SetFloat("shurikenState", 0);
                 transform.position = player.transform.position;
-                if (player.FacingDir == new Vector2(0,1))
+                if (player.FacingDir.y == 1)
                     sr.sortingOrder = player.spriteRend.sortingOrder + 10;
                 else
                     sr.sortingOrder = player.spriteRend.sortingOrder - 10;
                 break;
             case State.Thrown:
+                anim.SetFloat("shurikenState", 1);
                 break;
             case State.Recalling:
+                anim.SetFloat("shurikenState", 1);
                 break;
             case State.Hooked:
+
+                anim.SetFloat("shurikenState", -1);
                 if (target != null)
                     transform.position = target.transform.position;
                 else
@@ -89,7 +102,7 @@ public class Shuriken : MonoBehaviour
         transform.position = player.transform.position+dir.normalized;
         rb.AddForce(dir, ForceMode2D.Impulse);
         tr.enabled = true;
-        
+        audioManager.PlaySound("Shuriken");
         state = State.Thrown;
     }
     public void Recall()

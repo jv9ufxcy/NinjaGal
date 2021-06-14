@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 7173927079097878966}
   - component: {fileID: 6783750261280917572}
   m_Layer: 11
-  m_Name: CaveBat
+  m_Name: FlameBat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,7 +110,8 @@ MonoBehaviour:
   currentAttackIndex: 0
   formIndex: 0
   maxIndex: 0
-  bullets: []
+  bullets:
+  - {fileID: 7325429402923940334, guid: 213ce196e7d7e2342b245018cb2a9234, type: 3}
   leftStick: {x: 0, y: 0}
   deadzone: 0.2
   moveSpeed: 0.05
@@ -133,14 +134,14 @@ MonoBehaviour:
   hitStun: 0
   target: {fileID: 0}
   aggroRange: 10
-  longAttackRange: 2
+  longAttackRange: 6
   shortAttackRange: 2
   attackCooldown: 120
   isNearPlayer: 0
   isLongRange: 0
   isShortRange: 0
   closeAttackState: 15000000
-  rangedAttackState: 
+  rangedAttackState: 16000000
   desperationCAStates: 
   desperationRAStates: 
   enemyType: 1
@@ -161,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: 0
-  maxHealth: 10
+  maxHealth: 8
   currentShieldHealth: 0
   currentHealth: 0
   desperationHealth: 0
@@ -170,6 +171,7 @@ MonoBehaviour:
   HealthFill: {fileID: 0}
   DamageFill: {fileID: 0}
   BarImage: {fileID: 0}
+  MeterFill: {fileID: 0}
   showHealthTime: 1
   fadeOutTime: 0.5
   damageShowTime: 1
@@ -190,6 +192,7 @@ MonoBehaviour:
   dizzyMat: {fileID: 0}
   rend: {fileID: 0}
   effectsRend: {fileID: 0}
+  respawn: {fileID: 0}
   Door: {fileID: 0}
   healthDropRate: 2
   effectIndex: 0

@@ -124,7 +124,7 @@ MonoBehaviour:
   invulFlickerRate: 4
   dashCooldown: 0
   dashCooldownRate: 1
-  specialMeter: 0
+  specialMeter: 50
   specialMeterMax: 100
   nextSpecialMeterUse: 0
   curHitAnim: {x: 0, y: 0}
@@ -193,6 +193,7 @@ MonoBehaviour:
   dizzyMat: {fileID: 0}
   rend: {fileID: 0}
   effectsRend: {fileID: 0}
+  respawn: {fileID: 0}
   Door: {fileID: 0}
   healthDropRate: 2
   effectIndex: 0

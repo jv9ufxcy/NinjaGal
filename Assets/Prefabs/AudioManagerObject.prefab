@@ -163,27 +163,27 @@ MonoBehaviour:
   - name: KillEnemy
     clip: {fileID: 8300000, guid: 24b29858cbb26414c97963b63a94bcb1, type: 3}
     volume: 1
-    pitch: 0.5
+    pitch: 1
     loop: 0
   - name: Bullet
     clip: {fileID: 8300000, guid: 7116cf9da81747b43a5d4be22a146b15, type: 3}
     volume: 1
-    pitch: 0.5
+    pitch: 1
     loop: 0
   - name: Buster
     clip: {fileID: 8300000, guid: acb9733fe0bd5a14da5541e8d8e8a85f, type: 3}
     volume: 1
-    pitch: 0.5
+    pitch: 1
     loop: 0
   - name: Bomb
     clip: {fileID: 8300000, guid: a3035cd762d844c4fae49dc549983cb6, type: 3}
     volume: 1
-    pitch: 0.5
+    pitch: 1
     loop: 0
   - name: Shuriken
     clip: {fileID: 8300000, guid: 7b6076216382a504d879650b63cf5fbc, type: 3}
     volume: 1
-    pitch: 0.5
+    pitch: 1
     loop: 0
   - name: Flame
     clip: {fileID: 8300000, guid: 3c99fd91811b2e848a194717b73d8a82, type: 3}
@@ -193,17 +193,17 @@ MonoBehaviour:
   - name: Thunder
     clip: {fileID: 8300000, guid: 68b4f9547b042b94895d6a643d8ebff1, type: 3}
     volume: 1
-    pitch: 0.5
+    pitch: 1
     loop: 0
   - name: Blizzard
     clip: {fileID: 8300000, guid: 87510b623ff5a304c8c4cdc77b3b082d, type: 3}
     volume: 1
-    pitch: 0.5
+    pitch: 1
     loop: 0
   - name: Cast
     clip: {fileID: 8300000, guid: 7b6076216382a504d879650b63cf5fbc, type: 3}
     volume: 1
-    pitch: 0.5
+    pitch: 1
     loop: 0
 --- !u!82 &5212399024888041637
 AudioSource:

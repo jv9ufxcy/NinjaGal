@@ -5,6 +5,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Experimental.XR;
 using System;
+using UnityEditorInternal;
 
 public class CharacterObject : MonoBehaviour, IHittable
 {
@@ -309,7 +310,7 @@ public class CharacterObject : MonoBehaviour, IHittable
                 CinemachineShake.instance.ShakeCamera(_params[0].val, _params[1].val);
                 break;
             case 13:
-                ToggleMovelist();
+                ToggleMovelist((int)_params[0].val);
                 break;
             case 14:
                 QuickChangeForm(formIndex);
@@ -317,18 +318,22 @@ public class CharacterObject : MonoBehaviour, IHittable
         }
     }
     public int formIndex, maxIndex=3;
-    public void ToggleMovelist()
+    public void ToggleMovelist(int increment)
     {
-        formIndex++;
+        formIndex+=increment;
         if (formIndex > maxIndex)
         {
             formIndex = 1;
         }
+        if (formIndex < 1)
+        {
+            formIndex = maxIndex;
+        }
+        GlobalPrefab((float)formIndex);
     }
     public void QuickChangeForm(int index)
     {
         GameEngine.gameEngine.ChangeMovelist(index);
-        Debug.Log("Form " + index);
         //characterAnim.runtimeAnimatorController = formAnims[GameEngine.gameEngine.globalMovelistIndex];
     }
 
@@ -476,6 +481,8 @@ public class CharacterObject : MonoBehaviour, IHittable
         if (_newState == 0) { currentCommandStep = 0; }
 
         //Attacks
+        UseMeter(nextSpecialMeterUse);
+        nextSpecialMeterUse = 0;
         hitActive = 0;
         hitConfirm = 0;
 
@@ -592,7 +599,10 @@ public class CharacterObject : MonoBehaviour, IHittable
     {
         specialMeter += _val;
         specialMeter = Mathf.Clamp(specialMeter, 0f, specialMeterMax);
-        //healthManager.ChangeMeter((int)_val);
+        if (controlType == ControlType.PLAYER)
+        {
+            healthManager.ChangeMeter(specialMeter);
+        }
     }
     void UpdatePhysics()
     {
@@ -670,7 +680,7 @@ public class CharacterObject : MonoBehaviour, IHittable
                         nextHitStun *= 2;
                         nextDamage *= 2;
                         element.SpawnPrefabEffect(transform.position);
-                        Debug.Log("Crit");
+                        attacker.BuildMeter(5);
                     }
                 }
             }

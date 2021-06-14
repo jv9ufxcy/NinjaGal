@@ -126,7 +126,7 @@ public class HealthManager : MonoBehaviour
     public UIType UI = UIType.PLAYER;
     public float maxHealth = 100, currentShieldHealth = 0, currentHealth, desperationHealth;
     public int maxPoise = 10, currentPoise = 10;
-    public Image HealthFill, DamageFill, BarImage;
+    public Image HealthFill, DamageFill, BarImage, MeterFill;
 
     public float showHealthTime = 1, fadeOutTime = .5f, damageShowTime = 1, damageShowSpeed = 1f;
     public bool IsDead = true, shouldSpawnHealth = true, isDesperation;
@@ -347,7 +347,11 @@ public class HealthManager : MonoBehaviour
 
         healthIsVisible = true;
     }
-
+    public void ChangeMeter(float curMeter)
+    {
+        currentMeter = curMeter;
+        MeterFill.fillAmount = currentMeter / 100f;
+    }
     public void Die()
     {
         switch (UI)
@@ -372,6 +376,7 @@ public class HealthManager : MonoBehaviour
                 CinemachineShake.instance.ShakeCamera(2f, .1f);
                 //can move false
                 //playdeath sound
+                character.OnDeath();
                 respawn.RespawnPlayer();
                 break;
         }
