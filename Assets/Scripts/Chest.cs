@@ -28,6 +28,6 @@ public class Chest : MonoBehaviour
         anim.Play("ChestOpening");
         anim.SetFloat("Blend", 1f);
         audiomanager.PlaySound("ChestOpen");
-        GameObject healthInstance = Instantiate(healthPickup, this.gameObject.transform);
+        GameObject healthInstance = Instantiate(healthPickup, transform.position+Vector3.right,Quaternion.identity);
     }
 }

@@ -101,6 +101,33 @@ MonoBehaviour:
       parameters:
       - name: Dash
         val: 0
+    - start: 0
+      end: 0
+      active: 1
+      script: 5
+      parameters:
+      - name: 
+        val: 0
+      - name: 
+        val: 0
+      - name: 
+        val: 0
+      - name: 
+        val: 0
+      - name: 
+        val: 0
+      - name: 
+        val: 0
+      - name: 
+        val: 1
+      - name: 
+        val: 1
+      - name: 
+        val: 1
+      - name: 
+        val: 1
+      - name: 
+        val: 5
     attacks: []
     jumpReq: 0
     dashReq: 0
@@ -2202,6 +2229,7 @@ MonoBehaviour:
   - {fileID: 5380745437516235486, guid: ca7ff3fb975394d42a3802d851244363, type: 3}
   - {fileID: 8429325931262943744, guid: e7abc560fc926c54da452d50fd0b12d4, type: 3}
   - {fileID: 1003806981695228, guid: e21a578d42b53c2488ac5f0cacc78b3e, type: 3}
+  - {fileID: 6674884135230954851, guid: 956fceed3ee4cf54f9b2bc4983c2b46a, type: 3}
   rawInputs:
   - inputType: 0
     name: Ps4X

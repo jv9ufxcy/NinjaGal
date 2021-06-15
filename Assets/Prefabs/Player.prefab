@@ -110,7 +110,7 @@ MonoBehaviour:
   hitActive: 0
   currentAttackIndex: 0
   formIndex: 1
-  maxIndex: 3
+  maxIndex: 0
   bullets:
   - {fileID: 7325429402923940334, guid: 56c13d8873ba3ac4fa4a1f42bfb6af78, type: 3}
   - {fileID: 5107133312945511806, guid: c080b9a2f394a734f9065be725ecb60c, type: 3}
@@ -130,6 +130,7 @@ MonoBehaviour:
   curHitAnim: {x: 0, y: 0}
   targetHitAnim: {x: 0, y: 0}
   weaknesses: []
+  invul: []
   attackStrings: []
   hitStunStateIndex: 3
   deathStateIndex: 4
@@ -151,6 +152,10 @@ MonoBehaviour:
   canDefend: 0
   defStateIndex: 0
   defStates: 
+  startingPos: {x: 0, y: 0, z: 0}
+  roamingPos: {x: 0, y: 0, z: 0}
+  minRange: 10
+  maxRange: 40
 --- !u!114 &1658663442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +178,7 @@ MonoBehaviour:
   HealthFill: {fileID: 0}
   DamageFill: {fileID: 0}
   BarImage: {fileID: 0}
+  MeterFill: {fileID: 0}
   showHealthTime: 1
   fadeOutTime: 0.5
   damageShowTime: 1
@@ -180,8 +186,8 @@ MonoBehaviour:
   IsDead: 0
   shouldSpawnHealth: 0
   isDesperation: 0
-  HealthColor: {r: 0.08627451, g: 0.3921569, b: 0.7725491, a: 1}
-  DamageColor: {r: 0.8980393, g: 0.38823533, b: 0.20784315, a: 1}
+  HealthColor: {r: 0.52156866, g: 0.70980394, b: 0.8431373, a: 1}
+  DamageColor: {r: 0.3647059, g: 0.5176471, b: 0.81568635, a: 1}
   BackColor: {r: 1, g: 1, b: 1, a: 1}
   numOfPickups: 3
   keyPickup: {fileID: 0}
@@ -194,7 +200,7 @@ MonoBehaviour:
   rend: {fileID: 0}
   effectsRend: {fileID: 0}
   respawn: {fileID: 0}
-  Door: {fileID: 0}
+  damagePopup: {fileID: 0}
   healthDropRate: 2
   effectIndex: 0
 --- !u!50 &7173927079097878966

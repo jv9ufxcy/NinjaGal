@@ -90,8 +90,8 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 0
-  - name: OpenDoor3
-    clip: {fileID: 8300000, guid: ffaa954cd27c4d044a9a85cd76a81054, type: 3}
+  - name: Learned
+    clip: {fileID: 8300000, guid: 8e53fb4c7e667264eb056a3344e21679, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
     pitch: 1
     loop: 0
   - name: HealthPickup
-    clip: {fileID: 8300000, guid: 23e157deb72aebc47b1021c3555c653f, type: 3}
+    clip: {fileID: 8300000, guid: 700555ff5397eec46b662b5a16b5ad70, type: 3}
     volume: 1
     pitch: 1
     loop: 0

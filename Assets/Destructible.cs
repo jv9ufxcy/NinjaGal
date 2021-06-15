@@ -24,6 +24,7 @@ public class Destructible : MonoBehaviour, IHittable
         if (drop != null&&rand>chance)
         {
             GameObject go = Instantiate(drop, transform.position, Quaternion.identity);
+            go.transform.SetParent(null);
         }
         if (effect != null)
         {

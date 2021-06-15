@@ -319,6 +319,11 @@ public class CharacterObject : MonoBehaviour, IHittable
         }
     }
     public int formIndex, maxIndex=3;
+    public void LearnScroll()
+    {
+        maxIndex++;
+        maxIndex = Mathf.Clamp(maxIndex, 1, 3);
+    }
     public void ToggleMovelist(int increment)
     {
         formIndex+=increment;

@@ -283,4 +283,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdab0bf88f5db343b245bcacdfe7a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPickup: {fileID: 0}
+  healthPickup: {fileID: 1478389497874123396, guid: 20fc6121472a6024c90029b9a6eee50e,
+    type: 3}
