@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1947578370948499023}
   - component: {fileID: 8708496699523908098}
   - component: {fileID: 6569921234200593790}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: EnemyThunderBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ MonoBehaviour:
   character: {fileID: 0}
   projectileIndex: 10
   attackIndex: 0
-  tagToHit: Enemy
+  tagToHit: Player
 --- !u!61 &3448592109512797257
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4983,7 +4983,7 @@ GameObject:
   - component: {fileID: 1419541303898881533}
   - component: {fileID: 2589528391543778319}
   - component: {fileID: 9061473410306766873}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: BoltSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

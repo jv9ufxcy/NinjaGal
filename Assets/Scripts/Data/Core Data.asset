@@ -105,7 +105,7 @@ MonoBehaviour:
     jumpReq: 0
     dashReq: 0
     meterReq: 0
-    dashCooldownReq: 10
+    dashCooldownReq: 20
     groundedReq: 0
     wallReq: 1
   - stateName: HitStun
@@ -131,7 +131,34 @@ MonoBehaviour:
     length: 120
     loop: 0
     blendRate: 0.1
-    events: []
+    events:
+    - start: 0
+      end: 0
+      active: 1
+      script: 5
+      parameters:
+      - name: 
+        val: 0
+      - name: 
+        val: 0
+      - name: 
+        val: 0
+      - name: 
+        val: 0
+      - name: 
+        val: 0
+      - name: 
+        val: 0
+      - name: 
+        val: 1
+      - name: 
+        val: 1
+      - name: 
+        val: 1
+      - name: 
+        val: 1
+      - name: 
+        val: 4
     attacks: []
     jumpReq: 0
     dashReq: 0
@@ -440,7 +467,7 @@ MonoBehaviour:
     attacks:
     - start: 0
       length: 0
-      hitStun: 30
+      hitStun: 15
       hitStop: 5
       damage: 2
       meterGain: 0
@@ -448,7 +475,7 @@ MonoBehaviour:
       poiseDamage: 5
       attackType: 0
       hitAnim: {x: 0, y: 0}
-      knockback: {x: 30, y: 30, z: 0}
+      knockback: {x: 5, y: 5, z: 0}
       hitBoxPos: {x: 0, y: 0, z: 0}
       hitBoxScale: {x: 0, y: 0, z: 0}
       cancelWindow: 0
@@ -589,7 +616,7 @@ MonoBehaviour:
       poiseDamage: 5
       attackType: 0
       hitAnim: {x: 0, y: 0}
-      knockback: {x: 30, y: 30, z: 0}
+      knockback: {x: 0, y: 0, z: 0}
       hitBoxPos: {x: 0, y: 0, z: 0}
       hitBoxScale: {x: 0, y: 0, z: 0}
       cancelWindow: 0
@@ -667,7 +694,7 @@ MonoBehaviour:
       poiseDamage: 5
       attackType: 0
       hitAnim: {x: 0, y: 0}
-      knockback: {x: 30, y: 30, z: 0}
+      knockback: {x: 0, y: 0, z: 0}
       hitBoxPos: {x: 0, y: 0, z: 0}
       hitBoxScale: {x: 0, y: 0, z: 0}
       cancelWindow: 0
@@ -722,7 +749,7 @@ MonoBehaviour:
     attacks:
     - start: 0
       length: 0
-      hitStun: 30
+      hitStun: 45
       hitStop: 5
       damage: 2
       meterGain: 0
@@ -730,7 +757,7 @@ MonoBehaviour:
       poiseDamage: 5
       attackType: 0
       hitAnim: {x: 0, y: 0}
-      knockback: {x: 30, y: 30, z: 0}
+      knockback: {x: 5, y: 5, z: 0}
       hitBoxPos: {x: 0, y: 0, z: 0}
       hitBoxScale: {x: 0, y: 0, z: 0}
       cancelWindow: 0
@@ -800,7 +827,7 @@ MonoBehaviour:
     attacks:
     - start: 0
       length: 0
-      hitStun: 30
+      hitStun: 45
       hitStop: 5
       damage: 2
       meterGain: 0
@@ -808,7 +835,7 @@ MonoBehaviour:
       poiseDamage: 5
       attackType: 0
       hitAnim: {x: 0, y: 0}
-      knockback: {x: 30, y: 30, z: 0}
+      knockback: {x: 5, y: 5, z: 0}
       hitBoxPos: {x: 0, y: 0, z: 0}
       hitBoxScale: {x: 0, y: 0, z: 0}
       cancelWindow: 0
@@ -1055,8 +1082,8 @@ MonoBehaviour:
       parameters:
       - name: 
         val: 0
-    - start: 10
-      end: 10
+    - start: 30
+      end: 30
       active: 1
       script: 11
       parameters:
@@ -1073,7 +1100,7 @@ MonoBehaviour:
       poiseDamage: 0
       attackType: 0
       hitAnim: {x: 0, y: 0}
-      knockback: {x: 15, y: 15, z: 0}
+      knockback: {x: 5, y: 5, z: 0}
       hitBoxPos: {x: 0, y: 0, z: 0}
       hitBoxScale: {x: 2, y: 2, z: 1}
       cancelWindow: 0
@@ -1096,8 +1123,8 @@ MonoBehaviour:
       parameters:
       - name: 
         val: 0
-    - start: 10
-      end: 10
+    - start: 50
+      end: 50
       active: 1
       script: 9
       parameters:
@@ -1117,8 +1144,8 @@ MonoBehaviour:
         val: 360
       - name: 
         val: 0
-    - start: 10
-      end: 10
+    - start: 30
+      end: 30
       active: 1
       script: 11
       parameters:
@@ -1135,7 +1162,7 @@ MonoBehaviour:
       poiseDamage: 0
       attackType: 0
       hitAnim: {x: 0, y: 0}
-      knockback: {x: 10, y: 10, z: 0}
+      knockback: {x: 5, y: 5, z: 0}
       hitBoxPos: {x: 0, y: 0, z: 0}
       hitBoxScale: {x: 3, y: 3, z: 1}
       cancelWindow: 0
@@ -2174,6 +2201,7 @@ MonoBehaviour:
   - {fileID: 6934112776006633174, guid: f6a90bdffe1965d428ccd1a3dcd10d24, type: 3}
   - {fileID: 5380745437516235486, guid: ca7ff3fb975394d42a3802d851244363, type: 3}
   - {fileID: 8429325931262943744, guid: e7abc560fc926c54da452d50fd0b12d4, type: 3}
+  - {fileID: 1003806981695228, guid: e21a578d42b53c2488ac5f0cacc78b3e, type: 3}
   rawInputs:
   - inputType: 0
     name: Ps4X

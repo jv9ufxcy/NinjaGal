@@ -67,7 +67,8 @@ public class CharacterObject : MonoBehaviour, IHittable
     void Start()
     {
         defaultMat = spriteRend.material;
-
+        startingPos = transform.position;
+        roamingPos = GetRoamingPos();
         audioManager = AudioManager.instance;
         if (audioManager == null)
         {
@@ -646,7 +647,7 @@ public class CharacterObject : MonoBehaviour, IHittable
     {
         GetHit(attacker, projectileIndex, atkIndex, element);
     }
-    public DamageType[] weaknesses;
+    public DamageType[] weaknesses, invul;
     public void GetHit(CharacterObject attacker, int projectileIndex, int atkIndex, DamageType element)
     {
         AttackEvent curAtk;
@@ -669,7 +670,7 @@ public class CharacterObject : MonoBehaviour, IHittable
             int nextDamage = curAtk.damage;
             curComboValue = curAtk.comboValue;
             StartInvul(curAtk.hitStop);
-
+            bool isCrit = false;
             if (element!=null)
             {
                 for (int i = 0; i < weaknesses.Length; i++)
@@ -681,6 +682,16 @@ public class CharacterObject : MonoBehaviour, IHittable
                         nextDamage *= 2;
                         element.SpawnPrefabEffect(transform.position);
                         attacker.BuildMeter(5);
+                        isCrit = true;
+                    }
+                }
+                for (int i = 0; i < invul.Length; i++)
+                {
+                    if (invul[i] == element)
+                    {
+                        nextKnockback /= 2;
+                        nextHitStun /= 2;
+                        nextDamage /= 2;
                     }
                 }
             }
@@ -701,7 +712,7 @@ public class CharacterObject : MonoBehaviour, IHittable
             attacker.hitConfirm += 1;
             attacker.BuildMeter(curAtk.meterGain);
             //remove health
-            healthManager.RemoveHealth(nextDamage);
+            healthManager.RemoveHealth(nextDamage, isCrit);
             //play sound
             
             switch (controlType)
@@ -800,7 +811,16 @@ public class CharacterObject : MonoBehaviour, IHittable
     public int[] defStates;
 
     public Vector2 FacingDir { get => facingDir; set => facingDir = value; }
-
+    public Vector3 startingPos, roamingPos;
+    public float minRange = 10f, maxRange = 40f;
+    private Vector3 GetRandomDir()
+    {
+        return new Vector3(UnityEngine.Random.Range(-1, 1), UnityEngine.Random.Range(-1, 1)).normalized;
+    }
+    private Vector3 GetRoamingPos()
+    {
+        return startingPos + GetRandomDir() * UnityEngine.Random.Range(minRange, maxRange);
+    }
     private void UpdateAI()
     {
         if (target == null)
@@ -809,6 +829,15 @@ public class CharacterObject : MonoBehaviour, IHittable
         }
         if (currentState == 0)//Neutral
         {
+            if(!isNearPlayer)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, roamingPos, moveSpeed);
+                float reachedDist = 1f;
+                if (Vector3.Distance(transform.position,roamingPos)<reachedDist)
+                {
+                    roamingPos = GetRoamingPos();
+                }
+            }
             if (isNearPlayer&&!isShortRange)
             {
                 FaceTarget(target.transform.position);

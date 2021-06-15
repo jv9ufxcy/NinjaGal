@@ -57,12 +57,12 @@ public class Hitbox : MonoBehaviour
                     enemies.Add(collision);
                     victim.Hit(character, projectileIndex,0,null);
                 }
-                if (collision.gameObject.CompareTag("Shootable"))
-                {
-                    HealthManager destructible = collision.transform.root.GetComponent<HealthManager>();
-                    enemies.Add(collision);
-                    destructible.RemoveHealth(1);
-                }
+                //if (collision.gameObject.CompareTag("Shootable"))
+                //{
+                //    HealthManager destructible = collision.transform.root.GetComponent<HealthManager>();
+                //    enemies.Add(collision);
+                //    destructible.RemoveHealth(1,false);
+                //}
             }
         }
     }

@@ -18,7 +18,7 @@ public class GameEngine : MonoBehaviour
 
     public float deadZone = 0.2f;
 
-    
+    public Transform DamagePopup;
 
     public CharacterObject mainCharacter;
 

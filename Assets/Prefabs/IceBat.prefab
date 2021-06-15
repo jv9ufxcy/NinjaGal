@@ -118,7 +118,7 @@ MonoBehaviour:
   currentCommandStep: 0
   invulCooldown: 0
   invulFlickerRate: 4
-  dashCooldown: 0
+  dashCooldown: 120
   dashCooldownRate: 1
   specialMeter: 0
   specialMeterMax: 100
@@ -127,6 +127,8 @@ MonoBehaviour:
   targetHitAnim: {x: 0, y: 0}
   weaknesses:
   - {fileID: 11400000, guid: d5b5e7eba5157674cbc831d3c1d87507, type: 2}
+  invul:
+  - {fileID: 11400000, guid: c25f646f1c992954fa17f4806aad8515, type: 2}
   attackStrings: []
   hitStunStateIndex: 3
   deathStateIndex: 4
@@ -148,6 +150,10 @@ MonoBehaviour:
   canDefend: 0
   defStateIndex: 0
   defStates: 
+  startingPos: {x: 0, y: 0, z: 0}
+  roamingPos: {x: 0, y: 0, z: 0}
+  minRange: 8
+  maxRange: 16
 --- !u!114 &3672018394166780756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +198,7 @@ MonoBehaviour:
   rend: {fileID: 0}
   effectsRend: {fileID: 0}
   respawn: {fileID: 0}
-  Door: {fileID: 0}
+  damagePopup: {fileID: 0}
   healthDropRate: 2
   effectIndex: 0
 --- !u!50 &7173927079097878966

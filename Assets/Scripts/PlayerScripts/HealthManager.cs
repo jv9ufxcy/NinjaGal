@@ -134,18 +134,18 @@ public class HealthManager : MonoBehaviour
     private Color invisible = new Color(0, 0, 0, 0);
     public int numOfPickups = 3;
     public GameObject keyPickup;
-    
+
     public Animator effectsAnim, charAnim;
     private float currentMeter = 100, damageShowTimer, healthBarFadeTimer;
     private bool isHealing = false, coroutineStarted = false, healthIsVisible = false, deathCoroutineStarted = false;
     private CharacterObject character;
     public UnityEvent OnDeath;
     public Material dizzyMat;
-    public SpriteRenderer rend,effectsRend;
+    public SpriteRenderer rend, effectsRend;
     private AudioManager audioManager;
 
     [HideInInspector] public Respawn respawn;
-    [HideInInspector] public GameObject Door;
+    [SerializeField] private Transform damagePopup;
     //private PlayerRespawner respawner;
     public bool HasShield()
     {
@@ -306,11 +306,12 @@ public class HealthManager : MonoBehaviour
         }
     }
 
-    public void RemoveHealth(int amount)
+    public void RemoveHealth(int amount, bool isCrit)
     {
         damageShowTimer = damageShowTime;//set the timer back to max when injured happens
         healthBarFadeTimer = showHealthTime;//reset timer for showing health bar here too
         currentHealth -= amount;
+        DamagePopup.Create(transform.position, amount, isCrit);
         if (currentHealth <= 0)
         {
             currentHealth = 0;
