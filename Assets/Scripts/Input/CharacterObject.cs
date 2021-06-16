@@ -5,7 +5,6 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Experimental.XR;
 using System;
-using UnityEditorInternal;
 
 public class CharacterObject : MonoBehaviour, IHittable
 {
@@ -308,7 +307,7 @@ public class CharacterObject : MonoBehaviour, IHittable
                 audioManager.PlaySound(_params[0].name);
                 break;
             case 12:
-                CinemachineShake.instance.ShakeCamera(_params[0].val, _params[1].val);
+                ShakeScreen(_params[0].val, _params[1].val);
                 break;
             case 13:
                 ToggleMovelist((int)_params[0].val);
@@ -318,6 +317,12 @@ public class CharacterObject : MonoBehaviour, IHittable
                 break;
         }
     }
+
+    private static void ShakeScreen(float intensity, float time)
+    {
+        CinemachineShake.instance.ShakeCamera(intensity,time);
+    }
+
     public int formIndex, maxIndex=3;
     public void LearnScroll()
     {
@@ -584,10 +589,10 @@ public class CharacterObject : MonoBehaviour, IHittable
         return false;
     }
    
-    private static void Screenshake()
-    {
-        Camera.main.transform.GetComponent<CinemachineImpulseSource>().GenerateImpulse();
-    }
+    //private static void Screenshake()
+    //{
+    //    Camera.main.transform.GetComponent<CinemachineImpulseSource>().GenerateImpulse();
+    //}
 
     [Header("Timers")]
     public float invulCooldown, invulFlickerRate = 4f, dashCooldown, dashCooldownRate = 1f;
@@ -671,10 +676,11 @@ public class CharacterObject : MonoBehaviour, IHittable
             knockOrientation.Normalize();
             nextKnockback.x *= knockOrientation.x;
             nextKnockback.y *= knockOrientation.y;
+            float nextHitStop = curAtk.hitStop;
             float nextHitStun = curAtk.hitStun;
             int nextDamage = curAtk.damage;
             curComboValue = curAtk.comboValue;
-            StartInvul(curAtk.hitStop);
+            StartInvul(nextHitStop);
             bool isCrit = false;
             if (element!=null)
             {
@@ -688,6 +694,7 @@ public class CharacterObject : MonoBehaviour, IHittable
                         element.SpawnPrefabEffect(transform.position);
                         attacker.BuildMeter(5);
                         isCrit = true;
+                        ShakeScreen(1.5f,.2f);
                     }
                 }
                 for (int i = 0; i < invul.Length; i++)
@@ -713,7 +720,7 @@ public class CharacterObject : MonoBehaviour, IHittable
                 StartState(hitStunStateIndex);
             //}
 
-            GameEngine.SetHitPause(curAtk.hitStop);
+            GameEngine.SetHitPause(nextHitStop);
             attacker.hitConfirm += 1;
             attacker.BuildMeter(curAtk.meterGain);
             //remove health

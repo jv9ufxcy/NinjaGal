@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: 1
-  maxHealth: 10
+  maxHealth: 100
   currentShieldHealth: 0
   currentHealth: 0
   desperationHealth: 0

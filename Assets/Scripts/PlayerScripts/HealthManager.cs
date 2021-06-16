@@ -367,7 +367,7 @@ public class HealthManager : MonoBehaviour
                     
                     Destroy(this.gameObject, 1);
                 }
-                CinemachineShake.instance.ShakeCamera(1f, .1f);
+                CinemachineShake.instance.ShakeCamera(1f, .2f);
                 character.controlType = CharacterObject.ControlType.DEAD;
 
                 break;

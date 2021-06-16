@@ -212,7 +212,7 @@ MonoBehaviour:
       script: 1
       parameters:
       - name: 
-        val: 0
+        val: 2
     - start: 5
       end: 20
       active: 1
@@ -232,7 +232,7 @@ MonoBehaviour:
       length: 5
       hitStun: 20
       hitStop: 10
-      damage: 1
+      damage: 4
       meterGain: 5
       comboValue: 0
       poiseDamage: 0
@@ -267,8 +267,8 @@ MonoBehaviour:
       script: 1
       parameters:
       - name: 
-        val: 0
-    - start: 5
+        val: 3
+    - start: 10.025773
       end: 20
       active: 1
       script: 3
@@ -287,7 +287,7 @@ MonoBehaviour:
       length: 5
       hitStun: 20
       hitStop: 10
-      damage: 1
+      damage: 8
       meterGain: 5
       comboValue: 0
       poiseDamage: 2
@@ -323,43 +323,20 @@ MonoBehaviour:
       parameters:
       - name: FireShot
         val: 0
-    - start: 7
-      end: 17
+    - start: 2.0876288
+      end: 7.190721
       active: 1
       script: 1
       parameters:
       - name: 
-        val: 0
-    - start: 5
-      end: 5
-      active: 1
-      script: 12
-      parameters:
-      - name: 
-        val: 1
-      - name: 
-        val: 0.1
-    - start: 0
-      end: 4
-      active: 1
-      script: 3
-      parameters:
-      - name: 
-        val: 0.5
-    - start: 20
-      end: 40
-      active: 1
-      script: 3
-      parameters:
-      - name: 
-        val: 0.5
+        val: -2
     attacks:
     - start: 0
       length: 0
       hitStun: 20
       hitStop: 5
-      damage: 3
-      meterGain: 0
+      damage: 6
+      meterGain: 5
       comboValue: 0
       poiseDamage: 0
       attackType: 0
@@ -496,7 +473,7 @@ MonoBehaviour:
       length: 0
       hitStun: 15
       hitStop: 5
-      damage: 2
+      damage: 12
       meterGain: 0
       comboValue: 0
       poiseDamage: 5
@@ -554,7 +531,7 @@ MonoBehaviour:
       script: 1
       parameters:
       - name: 
-        val: 0
+        val: -2
     - start: 10
       end: 20
       active: 1
@@ -574,7 +551,7 @@ MonoBehaviour:
       length: 0
       hitStun: 30
       hitStop: 5
-      damage: 2
+      damage: 16
       meterGain: 0
       comboValue: 0
       poiseDamage: 5
@@ -637,7 +614,7 @@ MonoBehaviour:
       length: 0
       hitStun: 30
       hitStop: 5
-      damage: 2
+      damage: 14
       meterGain: 0
       comboValue: 0
       poiseDamage: 5
@@ -695,7 +672,7 @@ MonoBehaviour:
       script: 1
       parameters:
       - name: 
-        val: 0
+        val: -2
     - start: 10
       end: 20
       active: 1
@@ -715,7 +692,7 @@ MonoBehaviour:
       length: 0
       hitStun: 30
       hitStop: 5
-      damage: 2
+      damage: 18
       meterGain: 0
       comboValue: 0
       poiseDamage: 5
@@ -778,7 +755,7 @@ MonoBehaviour:
       length: 0
       hitStun: 45
       hitStop: 5
-      damage: 2
+      damage: 16
       meterGain: 0
       comboValue: 0
       poiseDamage: 5
@@ -856,7 +833,7 @@ MonoBehaviour:
       length: 0
       hitStun: 45
       hitStop: 5
-      damage: 2
+      damage: 18
       meterGain: 0
       comboValue: 0
       poiseDamage: 5
@@ -1018,7 +995,7 @@ MonoBehaviour:
       length: 15
       hitStun: 20
       hitStop: 5
-      damage: 2
+      damage: 16
       meterGain: 0
       comboValue: 0
       poiseDamage: 0
@@ -1080,7 +1057,7 @@ MonoBehaviour:
       length: 15
       hitStun: 20
       hitStop: 5
-      damage: 2
+      damage: 12
       meterGain: 0
       comboValue: 0
       poiseDamage: 0
@@ -1121,7 +1098,7 @@ MonoBehaviour:
       length: 10
       hitStun: 20
       hitStop: 5
-      damage: 1
+      damage: 14
       meterGain: 0
       comboValue: 0
       poiseDamage: 0
@@ -1183,7 +1160,7 @@ MonoBehaviour:
       length: 10
       hitStun: 20
       hitStop: 5
-      damage: 1
+      damage: 18
       meterGain: 0
       comboValue: 0
       poiseDamage: 0

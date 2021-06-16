@@ -137,7 +137,7 @@ MonoBehaviour:
   aggroRange: 10
   longAttackRange: 2
   shortAttackRange: 2
-  attackCooldown: 120
+  attackCooldown: 60
   isNearPlayer: 0
   isLongRange: 0
   isShortRange: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: 0
-  maxHealth: 10
+  maxHealth: 88
   currentShieldHealth: 0
   currentHealth: 0
   desperationHealth: 0

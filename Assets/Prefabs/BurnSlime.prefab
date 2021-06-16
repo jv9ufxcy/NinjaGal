@@ -137,8 +137,8 @@ MonoBehaviour:
   target: {fileID: 0}
   aggroRange: 6
   longAttackRange: 4
-  shortAttackRange: 1
-  attackCooldown: 120
+  shortAttackRange: 1.5
+  attackCooldown: 60
   isNearPlayer: 0
   isLongRange: 0
   isShortRange: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: 0
-  maxHealth: 5
+  maxHealth: 42
   currentShieldHealth: 0
   currentHealth: 0
   desperationHealth: 0
