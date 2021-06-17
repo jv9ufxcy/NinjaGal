@@ -328,7 +328,12 @@ public class CharacterObject : MonoBehaviour, IHittable
     {
         maxIndex++;
         maxIndex = Mathf.Clamp(maxIndex, 1, 3);
+        formIndex = maxIndex;
+        GlobalPrefab((float)formIndex);
+        defaultMat = henshinMats[formIndex];
+        spriteRend.material = defaultMat;
     }
+    public Material[] henshinMats;
     public void ToggleMovelist(int increment)
     {
         formIndex+=increment;
@@ -341,10 +346,14 @@ public class CharacterObject : MonoBehaviour, IHittable
             formIndex = maxIndex;
         }
         GlobalPrefab((float)formIndex);
+        defaultMat = henshinMats[formIndex];
+        spriteRend.material = defaultMat;
     }
     public void QuickChangeForm(int index)
     {
         GameEngine.gameEngine.ChangeMovelist(index);
+        //defaultMat = henshinMats[index];
+        //spriteRend.material = defaultMat;
         //characterAnim.runtimeAnimatorController = formAnims[GameEngine.gameEngine.globalMovelistIndex];
     }
 

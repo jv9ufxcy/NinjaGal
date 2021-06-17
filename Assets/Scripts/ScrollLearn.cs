@@ -29,7 +29,6 @@ public class ScrollLearn : MonoBehaviour
         if (!collected && coll.CompareTag("Player"))
         {
             gEngine.mainCharacter.LearnScroll();
-            gEngine.mainCharacter.GlobalPrefab(gEngine.mainCharacter.maxIndex);
             audioManager.PlaySound("Learned");
             Destroy(gameObject, .1f);
             collected = true;

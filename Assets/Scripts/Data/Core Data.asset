@@ -2209,39 +2209,39 @@ MonoBehaviour:
   - {fileID: 6674884135230954851, guid: 956fceed3ee4cf54f9b2bc4983c2b46a, type: 3}
   rawInputs:
   - inputType: 0
-    name: Ps4X
+    name: KeyboardSpace
   - inputType: 0
-    name: Ps4Square
+    name: KeyboardF
   - inputType: 0
-    name: Ps4O
+    name: KeyboardLeftShift
   - inputType: 0
-    name: Ps4Triangle
+    name: KeyboardE
   - inputType: 0
-    name: Ps4L1
+    name: KeyboardLeftCtrl
   - inputType: 0
-    name: Ps4R1
+    name: KeyboardQ
   - inputType: 0
-    name: Ps4L2
+    name: KeyboardX
   - inputType: 0
-    name: Ps4R2
+    name: KeyboardX
   - inputType: 0
-    name: Ps4Options
+    name: KeyboardP
   - inputType: 0
-    name: Ps4Share
+    name: KeyboardBackspace
   - inputType: 0
-    name: Ps4Touchpad
+    name: KeyboardX
   - inputType: 1
-    name: Ps4Horizontal
+    name: KeyboardHorizontal
   - inputType: 1
-    name: Ps4Vertical
+    name: KeyboardVertical
+  - inputType: 0
+    name: KeyboardHorizontal
+  - inputType: 0
+    name: KeyboardVertical
   - inputType: 1
-    name: altPs4Horizontal
+    name: Mouse X
   - inputType: 1
-    name: altPs4Vertical
-  - inputType: 1
-    name: Ps4HorizontalR
-  - inputType: 1
-    name: Ps4VerticalR
+    name: Mouse Y
   - inputType: 4
     name: IGNORE
   ps4Inputs:

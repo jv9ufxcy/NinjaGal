@@ -111,6 +111,11 @@ MonoBehaviour:
   currentAttackIndex: 0
   formIndex: 1
   maxIndex: 0
+  henshinMats:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 49c7359d26ecc084e87204d0ed7d4c38, type: 2}
+  - {fileID: 2100000, guid: 6b58577ac54d7544daf7a246236f0088, type: 2}
+  - {fileID: 2100000, guid: 8bcf656fc7ed55642b10c50bb7a503bc, type: 2}
   bullets:
   - {fileID: 7325429402923940334, guid: 56c13d8873ba3ac4fa4a1f42bfb6af78, type: 3}
   - {fileID: 5107133312945511806, guid: c080b9a2f394a734f9065be725ecb60c, type: 3}

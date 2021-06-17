@@ -44,9 +44,10 @@ public class StartScreenController : MonoBehaviour
     }
     void ActivateMenu()
     {
+        AudioManager.instance.PlaySound("ButtonClick");
         startPanel.SetActive(false);
         menuPanel.SetActive(true);
-        menuPanel.GetComponent<Button>().Select(); ;
+        menuPanel.GetComponentInChildren<Button>().Select();
         isMainMenuActive = true;
         GlobalVars.instance.PassControllerValue(value);
     }
