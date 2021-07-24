@@ -53,7 +53,7 @@ MonoBehaviour:
   rotation: 0
   lifetime: 2
   startTime: 60
-  index: 1
+  index: 0
   target: {fileID: 0}
   element: {fileID: 11400000, guid: d5b5e7eba5157674cbc831d3c1d87507, type: 2}
   character: {fileID: 0}
@@ -275,7 +275,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.25
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1025,7 +1025,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 1
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1078,7 +1078,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2

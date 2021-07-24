@@ -440,13 +440,13 @@ MonoBehaviour:
       - name: 
         val: 0
       - name: 
-        val: 1
+        val: 2
       - name: 
         val: 20
       - name: 
-        val: 0
+        val: 10
       - name: 
-        val: 0
+        val: 10
     - start: 0
       end: 5
       active: 1
@@ -485,7 +485,7 @@ MonoBehaviour:
       cancelWindow: 0
     jumpReq: 0
     dashReq: 0
-    meterReq: 10
+    meterReq: 5
     dashCooldownReq: 0
     groundedReq: 0
     wallReq: 0
@@ -503,15 +503,15 @@ MonoBehaviour:
       - name: 
         val: 0
       - name: 
-        val: 1
+        val: 3
       - name: 
         val: 20
       - name: 
-        val: 0
+        val: 30
       - name: 
-        val: 0
-    - start: 15
-      end: 15
+        val: 30
+    - start: 10
+      end: 10
       active: 1
       script: 10
       parameters:
@@ -522,16 +522,9 @@ MonoBehaviour:
       - name: 
         val: 20
       - name: 
-        val: 0
+        val: -30
       - name: 
         val: 0
-    - start: 0
-      end: 5
-      active: 1
-      script: 1
-      parameters:
-      - name: 
-        val: -2
     - start: 10
       end: 20
       active: 1
@@ -668,7 +661,7 @@ MonoBehaviour:
         val: 0
     - start: 0
       end: 5
-      active: 1
+      active: 0
       script: 1
       parameters:
       - name: 
@@ -809,7 +802,7 @@ MonoBehaviour:
         val: 0
     - start: 0
       end: 5
-      active: 1
+      active: 0
       script: 1
       parameters:
       - name: 
@@ -1333,7 +1326,7 @@ MonoBehaviour:
           input: 0
           state: 0
           inputs: 
-        followUps: 0100000003000000040000000500000006000000
+        followUps: 010000000300000004000000050000000600000007000000
         strict: 0
         myRect:
           serializedVersion: 2
@@ -1439,8 +1432,24 @@ MonoBehaviour:
           height: 50
         activated: 1
         priority: 0
+      - idIndex: 7
+        command:
+          motionCommand: 0
+          input: 2
+          state: 8
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 439
+          y: 208
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
       omitList: 02000000
-      nextFollowups: 0100000003000000040000000500000006000000
+      nextFollowups: 010000000300000004000000050000000600000007000000
     - stateName: Aerial
       aerial: 1
       explicitState: 0
@@ -1541,7 +1550,7 @@ MonoBehaviour:
           input: 0
           state: 0
           inputs: 
-        followUps: 0100000004000000050000000600000007000000
+        followUps: 010000000400000005000000060000000700000008000000
         strict: 0
         myRect:
           serializedVersion: 2
@@ -1663,8 +1672,24 @@ MonoBehaviour:
           height: 50
         activated: 1
         priority: 0
+      - idIndex: 8
+        command:
+          motionCommand: 0
+          input: 2
+          state: 9
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 460
+          y: 218
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
       omitList: 0200000003000000
-      nextFollowups: 0100000004000000050000000600000007000000
+      nextFollowups: 010000000400000005000000060000000700000008000000
     - stateName: Aerial
       aerial: 1
       explicitState: 0
@@ -1765,7 +1790,7 @@ MonoBehaviour:
           input: 0
           state: 0
           inputs: 
-        followUps: 0100000004000000050000000600000007000000
+        followUps: 010000000400000005000000060000000700000008000000
         strict: 0
         myRect:
           serializedVersion: 2
@@ -1887,8 +1912,24 @@ MonoBehaviour:
           height: 50
         activated: 1
         priority: 0
+      - idIndex: 8
+        command:
+          motionCommand: 0
+          input: 2
+          state: 9
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 504
+          y: 210
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
       omitList: 0200000003000000
-      nextFollowups: 0100000004000000050000000600000007000000
+      nextFollowups: 010000000400000005000000060000000700000008000000
     - stateName: Aerial
       aerial: 1
       explicitState: 0
@@ -1989,7 +2030,7 @@ MonoBehaviour:
           input: 0
           state: 0
           inputs: 
-        followUps: 0100000004000000050000000600000007000000
+        followUps: 010000000400000005000000060000000700000008000000
         strict: 0
         myRect:
           serializedVersion: 2
@@ -2111,8 +2152,24 @@ MonoBehaviour:
           height: 50
         activated: 1
         priority: 0
+      - idIndex: 8
+        command:
+          motionCommand: 0
+          input: 2
+          state: 9
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 494
+          y: 192
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
       omitList: 0200000003000000
-      nextFollowups: 0100000004000000050000000600000007000000
+      nextFollowups: 010000000400000005000000060000000700000008000000
     - stateName: Aerial
       aerial: 1
       explicitState: 0
@@ -2209,39 +2266,39 @@ MonoBehaviour:
   - {fileID: 6674884135230954851, guid: 956fceed3ee4cf54f9b2bc4983c2b46a, type: 3}
   rawInputs:
   - inputType: 0
-    name: KeyboardSpace
+    name: Ps4X
   - inputType: 0
-    name: KeyboardF
+    name: Ps4Square
   - inputType: 0
-    name: KeyboardLeftShift
+    name: Ps4O
   - inputType: 0
-    name: KeyboardE
+    name: Ps4Triangle
   - inputType: 0
-    name: KeyboardLeftCtrl
+    name: Ps4L1
   - inputType: 0
-    name: KeyboardQ
+    name: Ps4R1
   - inputType: 0
-    name: KeyboardX
+    name: Ps4L2
   - inputType: 0
-    name: KeyboardX
+    name: Ps4R2
   - inputType: 0
-    name: KeyboardP
+    name: Ps4Options
   - inputType: 0
-    name: KeyboardBackspace
+    name: Ps4Share
   - inputType: 0
-    name: KeyboardX
+    name: Ps4Touchpad
   - inputType: 1
-    name: KeyboardHorizontal
+    name: Ps4Horizontal
   - inputType: 1
-    name: KeyboardVertical
-  - inputType: 0
-    name: KeyboardHorizontal
-  - inputType: 0
-    name: KeyboardVertical
+    name: Ps4Vertical
   - inputType: 1
-    name: Mouse X
+    name: altPs4Horizontal
   - inputType: 1
-    name: Mouse Y
+    name: altPs4Vertical
+  - inputType: 1
+    name: Ps4HorizontalR
+  - inputType: 1
+    name: Ps4VerticalR
   - inputType: 4
     name: IGNORE
   ps4Inputs:
@@ -2320,13 +2377,13 @@ MonoBehaviour:
     name: IGNORE
   keyboardInputs:
   - inputType: 0
-    name: KeyboardSpace
+    name: KeyboardC
   - inputType: 0
-    name: KeyboardF
+    name: KeyboardZ
   - inputType: 0
     name: KeyboardLeftShift
   - inputType: 0
-    name: KeyboardE
+    name: KeyboardX
   - inputType: 0
     name: KeyboardLeftCtrl
   - inputType: 0

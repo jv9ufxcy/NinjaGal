@@ -110,6 +110,7 @@ MonoBehaviour:
   currentAttackIndex: 0
   formIndex: 0
   maxIndex: 0
+  henshinMats: []
   bullets:
   - {fileID: 5107133312945511806, guid: 31585e2cd7d8d4e44a6c526d8ea00c0b, type: 3}
   leftStick: {x: 0, y: 0}
@@ -168,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: 0
-  maxHealth: 64
+  maxHealth: 32
   currentShieldHealth: 0
   currentHealth: 0
   desperationHealth: 0

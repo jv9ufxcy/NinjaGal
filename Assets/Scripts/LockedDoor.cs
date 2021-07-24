@@ -19,6 +19,7 @@ public class LockedDoor : MonoBehaviour
             if (player.keyCount > 0 )
             {
                 Door();
+                player.keyCount--;
             }
             else
                 audiomanager.PlaySound("Locked");

@@ -110,6 +110,7 @@ MonoBehaviour:
   currentAttackIndex: 0
   formIndex: 0
   maxIndex: 0
+  henshinMats: []
   bullets: []
   leftStick: {x: 0, y: 0}
   deadzone: 0.2
@@ -167,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: 0
-  maxHealth: 112
+  maxHealth: 56
   currentShieldHealth: 0
   currentHealth: 0
   desperationHealth: 0

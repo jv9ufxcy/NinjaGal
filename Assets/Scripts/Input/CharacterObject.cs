@@ -411,7 +411,7 @@ public class CharacterObject : MonoBehaviour, IHittable
             var fractionOfDifference = fraction * difference;
             rotations[i] = fractionOfDifference + minRotation; // We add minRotation to undo Difference
         }
-        foreach (var r in rotations) print(r);
+        //foreach (var r in rotations) print(r);
         return rotations;
     }
     public GameObject[] SpawnBullets(int bulletResource, int numberOfBullets, float bulletSpeed, Vector2 bulletVelocity )
@@ -438,7 +438,10 @@ public class CharacterObject : MonoBehaviour, IHittable
             shuriken.ThrowShuriken(throwDir);
         }
         else
-            shuriken.Recall();
+        {
+            transform.DOMove(shuriken.transform.position,0.25f);
+            shuriken.Recall(); 
+        }
     }
 
     public void SetState(int stateIndex)
