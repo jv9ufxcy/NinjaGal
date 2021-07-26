@@ -12,17 +12,15 @@ public class PauseManager : MonoBehaviour
     public static PauseManager pauseManager;
     public static bool IsGamePaused = false;
     [SerializeField] string sceneToLoad;
-    [SerializeField] private GameObject pauseMenuUI, resultsMenuUI;
-    [SerializeField] private string[] missionResults;
-    public TextMeshProUGUI[] pointsText;
-
-    [SerializeField] private GameObject[] skillList;
-    [SerializeField] private Sprite[] spriteList;
-    [SerializeField] private Image eyeCon;
+    [SerializeField] private GameObject pauseMenuUI;
+    public Sprite[] controls,swap;
+    public Image controlsUI,swapUI;
     private void Start()
     {
         pauseManager = this;
         //GM = GameManager.instance;
+        controlsUI.sprite = controls[GlobalVars.controllerNumber];
+
     }
     public void PauseButtonPressed()
     {
@@ -46,12 +44,12 @@ public class PauseManager : MonoBehaviour
     }
     public void LoadMenu()
     {
-        //IsGamePaused = false;
-        //Time.timeScale = 1f;
+        IsGamePaused = false;
+        Time.timeScale = 1f;
         //Destroy(Mission.instance.gameObject);
         //MusicManager.instance.StopMusic();
         //GM.RestoreCheckpointStart();
-        //SceneTransitionController.instance.LoadScene(sceneToLoad);
+        SceneTransitionController.instance.LoadScene(sceneToLoad);
     }
     public void Quit()
     {

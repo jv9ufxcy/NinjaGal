@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 7173927079097878966}
   - component: {fileID: 6783750261280917572}
   m_Layer: 11
-  m_Name: ElecBat
+  m_Name: FlameBat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,10 +111,11 @@ MonoBehaviour:
   formIndex: 0
   maxIndex: 0
   henshinMats: []
-  bullets: []
+  bullets:
+  - {fileID: 7325429402923940334, guid: 213ce196e7d7e2342b245018cb2a9234, type: 3}
   leftStick: {x: 0, y: 0}
   deadzone: 0.2
-  moveSpeed: 0.07
+  moveSpeed: 0.05
   currentCommandState: 0
   currentCommandStep: 0
   invulCooldown: 0
@@ -127,23 +128,23 @@ MonoBehaviour:
   curHitAnim: {x: 0, y: 0}
   targetHitAnim: {x: 0, y: 0}
   weaknesses:
-  - {fileID: 11400000, guid: c25f646f1c992954fa17f4806aad8515, type: 2}
-  invul:
   - {fileID: 11400000, guid: f9874a88c98d37343b134cab98451721, type: 2}
+  invul:
+  - {fileID: 11400000, guid: d5b5e7eba5157674cbc831d3c1d87507, type: 2}
   attackStrings: []
   hitStunStateIndex: 3
   deathStateIndex: 4
   hitStun: 0
   target: {fileID: 0}
   aggroRange: 10
-  longAttackRange: 2
-  shortAttackRange: 2
-  attackCooldown: 60
+  longAttackRange: 6
+  shortAttackRange: 6
+  attackCooldown: 120
   isNearPlayer: 0
   isLongRange: 0
   isShortRange: 0
-  closeAttackState: 15000000
-  rangedAttackState: 
+  closeAttackState: 16000000
+  rangedAttackState: 16000000
   desperationCAStates: 
   desperationRAStates: 
   enemyType: 1
@@ -168,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: 0
-  maxHealth: 44
+  maxHealth: 36
   currentShieldHealth: 0
   currentHealth: 0
   desperationHealth: 0
@@ -189,7 +190,8 @@ MonoBehaviour:
   DamageColor: {r: 1, g: 0.56078434, b: 0.56078434, a: 1}
   BackColor: {r: 1, g: 1, b: 1, a: 1}
   numOfPickups: 3
-  keyPickup: {fileID: 0}
+  keyPickup: {fileID: 1801107891021958153, guid: b2f146ea64b802b43a0c42ffb34379c3,
+    type: 3}
   effectsAnim: {fileID: 0}
   charAnim: {fileID: 0}
   OnDeath:
@@ -200,8 +202,13 @@ MonoBehaviour:
   effectsRend: {fileID: 0}
   respawn: {fileID: 0}
   damagePopup: {fileID: 0}
-  healthDropRate: 2
-  effectIndex: 0
+  minRotation: 0
+  maxRotation: 360
+  numberOfBullets: 0
+  isRandom: 0
+  cooldown: 0
+  bulletSpeed: 3
+  bulletVelocity: {x: 0, y: 1}
 --- !u!50 &7173927079097878966
 Rigidbody2D:
   serializedVersion: 4
@@ -549,7 +556,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4cfe03d06cf8dd44db723e86931dac34, type: 2}
+  - {fileID: 2100000, guid: 284e6e8903714044abe34d47431b86da, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

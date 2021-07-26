@@ -12,6 +12,7 @@ public class Destructible : MonoBehaviour, IHittable
     void Start()
     {
         audioManager = AudioManager.instance;
+        transform.SetParent(null);
     }
     public void Hit(CharacterObject attacker, int projectileIndex, int atkIndex, DamageType element)
     {

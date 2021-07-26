@@ -7,6 +7,7 @@ public class StartScreenController : MonoBehaviour
 {
     private bool isMainMenuActive=false;
     public GameObject startPanel, menuPanel;
+    public Button playButton;
     private int value;
     // Start is called before the first frame update
     void Start()
@@ -47,8 +48,10 @@ public class StartScreenController : MonoBehaviour
         AudioManager.instance.PlaySound("ButtonClick");
         startPanel.SetActive(false);
         menuPanel.SetActive(true);
-        menuPanel.GetComponentInChildren<Button>().Select();
+        //menuPanel.GetComponentInChildren<Button>().Select();
+        //playButton.FindSelectable();
         isMainMenuActive = true;
+        playButton.Select();
         GlobalVars.instance.PassControllerValue(value);
     }
     public void Quit()

@@ -116,16 +116,30 @@ public class Shuriken : MonoBehaviour
     public int atkIndex = 7;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (state == State.Thrown)
+        IHittable victim = collision.transform.root.GetComponent<IHittable>();
+        switch (state)
         {
-            IHittable victim = collision.transform.root.GetComponent<IHittable>();
-            if (victim != player.GetComponent<IHittable>() && victim != null)
-            {
-                state = State.Hooked;
-                CinemachineShake.instance.ShakeCamera(1, 0.2f);
-                target = collision.transform.root.GetComponent<CharacterObject>();
-                victim.Hit(player,7, 0, null);
-            }
+            case State.Equipped:
+                break;
+            case State.Thrown:
+                if (victim != player.GetComponent<IHittable>() && victim != null)
+                {
+                    state = State.Hooked;
+                    CinemachineShake.instance.ShakeCamera(1, 0.2f);
+                    target = collision.transform.root.GetComponent<CharacterObject>();
+                    victim.Hit(player, 7, 0, null);
+                }
+                break;
+            case State.Recalling:
+                if (victim != player.GetComponent<IHittable>() && victim != null)
+                {
+                    victim.Hit(player, 7, 0, null);
+                }
+                break;
+            case State.Hooked:
+                break;
+            default:
+                break;
         }
     }
 }

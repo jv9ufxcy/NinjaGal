@@ -96,6 +96,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 8
+  kiAmount: 10
+  tracking: 0
+  timeToTrack: 0
+  velocity: {x: 0, y: 0}
+  speed: 0
+  rotation: 0
+  pickupSound: HealthPickup
 --- !u!61 &6837095200088801727
 BoxCollider2D:
   m_ObjectHideFlags: 0

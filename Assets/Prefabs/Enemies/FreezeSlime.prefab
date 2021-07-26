@@ -112,7 +112,7 @@ MonoBehaviour:
   maxIndex: 0
   henshinMats: []
   bullets:
-  - {fileID: 7325429402923940334, guid: 213ce196e7d7e2342b245018cb2a9234, type: 3}
+  - {fileID: 5107133312945511806, guid: bb70b2bbc433d0f418e21e314b361455, type: 3}
   leftStick: {x: 0, y: 0}
   deadzone: 0.2
   moveSpeed: 0.02
@@ -143,7 +143,7 @@ MonoBehaviour:
   isNearPlayer: 0
   isLongRange: 0
   isShortRange: 0
-  closeAttackState: 17000000
+  closeAttackState: 19000000
   rangedAttackState: 
   desperationCAStates: 
   desperationRAStates: 
@@ -190,7 +190,8 @@ MonoBehaviour:
   DamageColor: {r: 1, g: 0.56078434, b: 0.56078434, a: 1}
   BackColor: {r: 1, g: 1, b: 1, a: 1}
   numOfPickups: 3
-  keyPickup: {fileID: 0}
+  keyPickup: {fileID: 1801107891021958153, guid: b2f146ea64b802b43a0c42ffb34379c3,
+    type: 3}
   effectsAnim: {fileID: 0}
   charAnim: {fileID: 0}
   OnDeath:
@@ -201,8 +202,13 @@ MonoBehaviour:
   effectsRend: {fileID: 0}
   respawn: {fileID: 0}
   damagePopup: {fileID: 0}
-  healthDropRate: 2
-  effectIndex: 0
+  minRotation: 0
+  maxRotation: 360
+  numberOfBullets: 0
+  isRandom: 0
+  cooldown: 0
+  bulletSpeed: 3
+  bulletVelocity: {x: 0, y: 1}
 --- !u!50 &7173927079097878966
 Rigidbody2D:
   serializedVersion: 4

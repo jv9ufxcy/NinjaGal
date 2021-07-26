@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -495,6 +495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPanel: {fileID: 2033715087}
   menuPanel: {fileID: 1971000183}
+  playButton: {fileID: 1587427499}
 --- !u!82 &354370915
 AudioSource:
   m_ObjectHideFlags: 0
@@ -654,7 +655,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1389743890}
+      - m_Target: {fileID: 7486983583844878771}
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
@@ -1443,18 +1444,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107505904}
   m_CullTransparentMesh: 0
---- !u!114 &1389743890 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1721602246, guid: e7463a001d935a14b81e929aa3776e1d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1721602244}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83dcea8ac0448c146a9221e3e21a729e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1587427497
 GameObject:
   m_ObjectHideFlags: 0
@@ -2167,3 +2156,15 @@ MonoBehaviour:
   _bobDirection: 0
   bobStrength: 1
   bobSpeed: 2
+--- !u!114 &7486983583844878771 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1721602246, guid: e7463a001d935a14b81e929aa3776e1d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1721602244}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83dcea8ac0448c146a9221e3e21a729e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

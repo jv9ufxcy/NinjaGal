@@ -324,6 +324,7 @@ public class HealthManager : MonoBehaviour
                 break;
             case UIType.PLAYER:
                 UpdateFill();
+                HitCounter.instance.OnPlayerDamaged();
                 break;
             case UIType.BOSS:
                 UpdateFill();
@@ -362,9 +363,9 @@ public class HealthManager : MonoBehaviour
                     audioManager.PlaySound("EnemyDeath");
                     TurnInvisible();
                     TurnNotCollidable();
-                    //SpawnPickup(keyPickup);
+                    SpawnPickup();
                     character.OnDeath();
-                    
+                    HitCounter.instance.OnEnemyKilled();
                     Destroy(this.gameObject, 1);
                 }
                 CinemachineShake.instance.ShakeCamera(1f, .2f);
@@ -400,17 +401,75 @@ public class HealthManager : MonoBehaviour
             renderers[i].color = invisible;
         }
     }
-    public int healthDropRate = 2, effectIndex;
-    /// <summary>
-    /// waits until the death animation is done and then destroys the character
-    /// </summary>
-    /// <returns></returns>
-   
-    private void SpawnPickup(GameObject pickup)
+    public float minRotation;
+    public float maxRotation=360;
+    public int numberOfBullets;
+    public bool isRandom=false;
+
+    public float cooldown;
+    float timer;
+    public float bulletSpeed;
+    public Vector2 bulletVelocity;
+
+
+    float[] rotations;
+    public float[] RandomRotations()
     {
-        //30% chance of spawnign key
-        int rand = UnityEngine.Random.Range(0, 101);
-        if(rand <= 30)
-            Instantiate(pickup, this.transform.position, this.transform.rotation);
+        for (int i = 0; i < numberOfBullets; i++)
+        {
+            rotations[i] = UnityEngine.Random.Range(minRotation, maxRotation);
+        }
+        return rotations;
+
     }
+    public float[] DistributedRotations()
+    {
+        for (int i = 0; i < numberOfBullets; i++)
+        {
+            var fraction = (float)i / ((float)numberOfBullets - 1);
+            var difference = maxRotation - minRotation;
+            var fractionOfDifference = fraction * difference;
+            rotations[i] = fractionOfDifference + minRotation; // We add minRotation to undo Difference
+        }
+        foreach (var r in rotations) print(r);
+        return rotations;
+    }
+    public GameObject[] SpawnBullets()
+    {
+        if (isRandom)
+        {
+            // This is in Update because we want a random rotation for each bullet each time
+            RandomRotations();
+        }
+
+        // Spawn Bullets
+        GameObject[] spawnedBullets = new GameObject[numberOfBullets];
+        for (int i = 0; i < numberOfBullets; i++)
+        {
+            spawnedBullets[i] = Instantiate(keyPickup, transform);
+
+            var b = spawnedBullets[i].GetComponent<HealthPickup>();
+            b.rotation = rotations[i];
+            b.speed = bulletSpeed;
+            b.velocity = bulletVelocity;
+        }
+        return spawnedBullets;
+    }
+    private void SpawnPickup()
+    {
+        numberOfBullets = HitCounter.instance.hitCount + 2;
+        rotations = new float[numberOfBullets];
+        DistributedRotations();
+        SpawnBullets();
+        //for (int i = 0; i < HitCounter.instance.hitCount+2; i++)
+        //{
+        //    int randNumX = UnityEngine.Random.Range(-20, 20);
+        //    int randNumY = UnityEngine.Random.Range(15, 35);
+        //    Vector2 offsetDir = new Vector2(randNumX, randNumY);
+        //    GameObject effect = Instantiate(pickup, transform.position, transform.rotation);
+        //    effect.GetComponentInChildren<Rigidbody2D>().AddForce(offsetDir, ForceMode2D.Impulse);
+        //    effect.transform.SetParent(null);
+        //}
+    }
+
 }

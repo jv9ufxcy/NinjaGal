@@ -233,7 +233,7 @@ MonoBehaviour:
       hitStun: 20
       hitStop: 10
       damage: 4
-      meterGain: 5
+      meterGain: 1
       comboValue: 0
       poiseDamage: 0
       attackType: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
       hitStun: 20
       hitStop: 10
       damage: 8
-      meterGain: 5
+      meterGain: 2
       comboValue: 0
       poiseDamage: 2
       attackType: 0
@@ -336,7 +336,7 @@ MonoBehaviour:
       hitStun: 20
       hitStop: 5
       damage: 6
-      meterGain: 5
+      meterGain: 3
       comboValue: 0
       poiseDamage: 0
       attackType: 0
@@ -1135,6 +1135,68 @@ MonoBehaviour:
         val: 0
       - name: 
         val: -1
+      - name: 
+        val: 0
+      - name: 
+        val: 360
+      - name: 
+        val: 0
+    - start: 30
+      end: 30
+      active: 1
+      script: 11
+      parameters:
+      - name: EnemyAttack2
+        val: 0
+    attacks:
+    - start: 50
+      length: 10
+      hitStun: 20
+      hitStop: 5
+      damage: 18
+      meterGain: 0
+      comboValue: 0
+      poiseDamage: 0
+      attackType: 0
+      hitAnim: {x: 0, y: 0}
+      knockback: {x: 5, y: 5, z: 0}
+      hitBoxPos: {x: 0, y: 0, z: 0}
+      hitBoxScale: {x: 3, y: 3, z: 1}
+      cancelWindow: 0
+    jumpReq: 0
+    dashReq: 0
+    meterReq: 0
+    dashCooldownReq: 0
+    groundedReq: 0
+    wallReq: 0
+  - stateName: SlimeMelee2
+    index: 0
+    length: 70
+    loop: 0
+    blendRate: 0.1
+    events:
+    - start: 0
+      end: 70
+      active: 1
+      script: 1
+      parameters:
+      - name: 
+        val: 0
+    - start: 50
+      end: 50
+      active: 1
+      script: 9
+      parameters:
+      - name: 
+        val: 0
+      - name: 
+        val: 4
+      - name: 
+        val: 0.5
+      - name: 
+        val: 0
+      - name: 
+        val: 1
       - name: 
         val: 0
       - name: 

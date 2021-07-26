@@ -73,6 +73,10 @@ public class CharacterObject : MonoBehaviour, IHittable
         {
             Debug.LogError("No Audio Manager in Scene");
         }
+        if (controlType==ControlType.OBJECT)
+        {
+            transform.SetParent(null);
+        }
     }
 
     // Update is called once per frame
@@ -95,8 +99,8 @@ public class CharacterObject : MonoBehaviour, IHittable
                 break;
             case ControlType.PLAYER:
                 //pauseMenuCheck
-                //if (Input.GetButtonDown(GameEngine.coreData.rawInputs[8].name))
-                //    PauseManager.pauseManager.PauseButtonPressed();
+                if (Input.GetButtonDown(GameEngine.coreData.rawInputs[8].name))
+                    PauseManager.pauseManager.PauseButtonPressed();
 
                 leftStick = new Vector2(Input.GetAxis(GameEngine.coreData.rawInputs[13].name), Input.GetAxis(GameEngine.coreData.rawInputs[14].name));
               break;
@@ -704,7 +708,7 @@ public class CharacterObject : MonoBehaviour, IHittable
                         nextHitStun *= 2;
                         nextDamage *= 2;
                         element.SpawnPrefabEffect(transform.position);
-                        attacker.BuildMeter(5);
+                        //attacker.BuildMeter(2);
                         isCrit = true;
                         ShakeScreen(1.5f,.2f);
                     }
