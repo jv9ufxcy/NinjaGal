@@ -457,7 +457,7 @@ public class HealthManager : MonoBehaviour
     }
     private void SpawnPickup()
     {
-        numberOfBullets = HitCounter.instance.hitCount + 2;
+        numberOfBullets = Mathf.Clamp(HitCounter.instance.hitCount,2,50);
         rotations = new float[numberOfBullets];
         DistributedRotations();
         SpawnBullets();

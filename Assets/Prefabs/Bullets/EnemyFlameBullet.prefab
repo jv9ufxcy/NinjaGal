@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4057243807786951391}
   - component: {fileID: 6164076868594298873}
   - component: {fileID: 1075741259989782584}
-  m_Layer: 12
+  m_Layer: 14
   m_Name: EnemyFlameBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 711bac25ed2142e4f874223938537edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0}
+  velocity: {x: 0, y: 1}
   speed: 0
   rotation: 0
   lifetime: 3
@@ -4925,7 +4925,7 @@ GameObject:
   - component: {fileID: 3529186867448043885}
   - component: {fileID: 46957739646421151}
   - component: {fileID: 6812217271426915465}
-  m_Layer: 12
+  m_Layer: 14
   m_Name: BoltSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
