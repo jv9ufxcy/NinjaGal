@@ -20,6 +20,7 @@ public class PauseManager : MonoBehaviour
         pauseManager = this;
         //GM = GameManager.instance;
         controlsUI.sprite = controls[GlobalVars.controllerNumber];
+        swapUI.sprite = swap[GlobalVars.controllerNumber];
 
     }
     public void PauseButtonPressed()
