@@ -232,7 +232,7 @@ MonoBehaviour:
       length: 5
       hitStun: 20
       hitStop: 10
-      damage: 4
+      damage: 6
       meterGain: 1
       comboValue: 0
       poiseDamage: 0
@@ -335,7 +335,7 @@ MonoBehaviour:
       length: 0
       hitStun: 20
       hitStop: 5
-      damage: 6
+      damage: 8
       meterGain: 3
       comboValue: 0
       poiseDamage: 0

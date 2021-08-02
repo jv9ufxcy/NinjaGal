@@ -120,7 +120,7 @@ MonoBehaviour:
   currentCommandStep: 0
   invulCooldown: 0
   invulFlickerRate: 4
-  dashCooldown: 120
+  dashCooldown: 80
   dashCooldownRate: 1
   specialMeter: 0
   specialMeterMax: 100
@@ -139,7 +139,7 @@ MonoBehaviour:
   aggroRange: 6
   longAttackRange: 4
   shortAttackRange: 3
-  attackCooldown: 120
+  attackCooldown: 80
   isNearPlayer: 0
   isLongRange: 0
   isShortRange: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: 0
-  maxHealth: 40
+  maxHealth: 30
   currentShieldHealth: 0
   currentHealth: 0
   desperationHealth: 0

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -210,8 +210,8 @@ MonoBehaviour:
   minEnemies: 4
   maxEnemies: 6
   enemies:
-  - {fileID: 1163767733776788432, guid: 8d2d5a7957297a7478528d76aa4b4679, type: 3}
-  - {fileID: 1163767733776788432, guid: fd4a97787ae29ef42bbe352d4444dc76, type: 3}
+  - {fileID: 1163767733776788432, guid: b6bfab74b43892c4dbc83f5637eff03f, type: 3}
+  - {fileID: 1163767733776788432, guid: b3ea42051c739984582e7afa0c437a7c, type: 3}
   spawnPoints:
   - {fileID: 1470578291}
   - {fileID: 679001217}
@@ -54148,7 +54148,7 @@ MonoBehaviour:
   minEnemies: 3
   maxEnemies: 5
   enemies:
-  - {fileID: 1163767733776788432, guid: b6bfab74b43892c4dbc83f5637eff03f, type: 3}
+  - {fileID: 1163767733776788432, guid: b3ea42051c739984582e7afa0c437a7c, type: 3}
   - {fileID: 1163767733776788432, guid: b612558b4e805e14592e7594f622133f, type: 3}
   spawnPoints:
   - {fileID: 825731563}
@@ -54608,7 +54608,7 @@ MonoBehaviour:
   maxEnemies: 8
   enemies:
   - {fileID: 1163767733776788432, guid: 27e5cceb8e317bd40bdff7be18fe1299, type: 3}
-  - {fileID: 1163767733776788432, guid: 8d2d5a7957297a7478528d76aa4b4679, type: 3}
+  - {fileID: 1163767733776788432, guid: 50c814089c66ad241b88a7f287f92e16, type: 3}
   - {fileID: 1163767733776788432, guid: b6bfab74b43892c4dbc83f5637eff03f, type: 3}
   - {fileID: 1163767733776788432, guid: fd4a97787ae29ef42bbe352d4444dc76, type: 3}
   spawnPoints:
@@ -55974,6 +55974,11 @@ MonoBehaviour:
   - {fileID: 1163767733776788432, guid: 30227beeda8292d4194c79278f741ad7, type: 3}
   - {fileID: 1163767733776788432, guid: fd4a97787ae29ef42bbe352d4444dc76, type: 3}
   - {fileID: 1163767733776788432, guid: b612558b4e805e14592e7594f622133f, type: 3}
+  - {fileID: 1163767733776788432, guid: 50c814089c66ad241b88a7f287f92e16, type: 3}
+  - {fileID: 1163767733776788432, guid: b3ea42051c739984582e7afa0c437a7c, type: 3}
+  - {fileID: 1163767733776788432, guid: 45c0ce47d322f664e9acd20677456d5c, type: 3}
+  - {fileID: 1163767733776788432, guid: b6bfab74b43892c4dbc83f5637eff03f, type: 3}
+  - {fileID: 1163767733776788432, guid: 8d2d5a7957297a7478528d76aa4b4679, type: 3}
   spawnPoints:
   - {fileID: 689963421}
   - {fileID: 1974197152}
@@ -57916,7 +57921,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 16
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 480, y: 270}
+  m_ReferenceResolution: {x: 960, y: 540}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -58424,7 +58429,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 1163767733776788432, guid: 8d2d5a7957297a7478528d76aa4b4679, type: 3}
   - {fileID: 1163767733776788432, guid: 8d2d5a7957297a7478528d76aa4b4679, type: 3}
-  - {fileID: 1163767733776788432, guid: 27e5cceb8e317bd40bdff7be18fe1299, type: 3}
+  - {fileID: 1163767733776788432, guid: 50c814089c66ad241b88a7f287f92e16, type: 3}
   spawnPoints:
   - {fileID: 2123808651}
   - {fileID: 1078381265}
@@ -61347,7 +61352,8 @@ MonoBehaviour:
   minEnemies: 2
   maxEnemies: 3
   enemies:
-  - {fileID: 1163767733776788432, guid: b6bfab74b43892c4dbc83f5637eff03f, type: 3}
+  - {fileID: 1163767733776788432, guid: fd4a97787ae29ef42bbe352d4444dc76, type: 3}
+  - {fileID: 1163767733776788432, guid: 45c0ce47d322f664e9acd20677456d5c, type: 3}
   spawnPoints:
   - {fileID: 63121839}
   - {fileID: 1457390102}
@@ -99151,7 +99157,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 16
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 480, y: 270}
+  m_ReferenceResolution: {x: 960, y: 540}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -99880,8 +99886,8 @@ MonoBehaviour:
   minEnemies: 2
   maxEnemies: 6
   enemies:
+  - {fileID: 1163767733776788432, guid: 45c0ce47d322f664e9acd20677456d5c, type: 3}
   - {fileID: 1163767733776788432, guid: b612558b4e805e14592e7594f622133f, type: 3}
-  - {fileID: 1163767733776788432, guid: 27e5cceb8e317bd40bdff7be18fe1299, type: 3}
   spawnPoints:
   - {fileID: 2141681213}
   - {fileID: 37521323}
@@ -101549,6 +101555,7 @@ MonoBehaviour:
   - {fileID: 1163767733776788432, guid: 27e5cceb8e317bd40bdff7be18fe1299, type: 3}
   - {fileID: 1163767733776788432, guid: 30227beeda8292d4194c79278f741ad7, type: 3}
   - {fileID: 1163767733776788432, guid: 8d2d5a7957297a7478528d76aa4b4679, type: 3}
+  - {fileID: 1163767733776788432, guid: 50c814089c66ad241b88a7f287f92e16, type: 3}
   spawnPoints:
   - {fileID: 2090790896}
   - {fileID: 1988385437}
@@ -103512,7 +103519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee42caa28a673c34c92f9de123265f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minEnemies: 2
+  minEnemies: 3
   maxEnemies: 8
   enemies:
   - {fileID: 1163767733776788432, guid: b6bfab74b43892c4dbc83f5637eff03f, type: 3}
@@ -103902,7 +103909,8 @@ MonoBehaviour:
   maxEnemies: 6
   enemies:
   - {fileID: 1163767733776788432, guid: 8d2d5a7957297a7478528d76aa4b4679, type: 3}
-  - {fileID: 1163767733776788432, guid: 27e5cceb8e317bd40bdff7be18fe1299, type: 3}
+  - {fileID: 1163767733776788432, guid: 50c814089c66ad241b88a7f287f92e16, type: 3}
+  - {fileID: 1163767733776788432, guid: 45c0ce47d322f664e9acd20677456d5c, type: 3}
   spawnPoints:
   - {fileID: 5747187322626217763}
   - {fileID: 5747187323132470597}

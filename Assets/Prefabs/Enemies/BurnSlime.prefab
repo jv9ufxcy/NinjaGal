@@ -115,7 +115,7 @@ MonoBehaviour:
   - {fileID: 7325429402923940334, guid: 213ce196e7d7e2342b245018cb2a9234, type: 3}
   leftStick: {x: 0, y: 0}
   deadzone: 0.2
-  moveSpeed: 0.04
+  moveSpeed: 0.06
   currentCommandState: 0
   currentCommandStep: 0
   invulCooldown: 0
@@ -139,7 +139,7 @@ MonoBehaviour:
   aggroRange: 6
   longAttackRange: 4
   shortAttackRange: 1.5
-  attackCooldown: 60
+  attackCooldown: 45
   isNearPlayer: 0
   isLongRange: 0
   isShortRange: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: 0
-  maxHealth: 21
+  maxHealth: 20
   currentShieldHealth: 0
   currentHealth: 0
   desperationHealth: 0
