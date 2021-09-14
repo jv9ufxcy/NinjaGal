@@ -40,6 +40,9 @@ public class Shuriken : MonoBehaviour
                     Recall();
                 }
                 break;
+            case State.Hooked:
+                TryGrabShuriken();
+                break;
             case State.Recalling:
                 Vector3 dirToPlayer = (player.transform.position - transform.position).normalized;
                 rb.velocity = dirToPlayer * recallSpeed;

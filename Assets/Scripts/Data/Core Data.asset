@@ -132,7 +132,7 @@ MonoBehaviour:
     jumpReq: 0
     dashReq: 0
     meterReq: 0
-    dashCooldownReq: 20
+    dashCooldownReq: 0
     groundedReq: 0
     wallReq: 1
   - stateName: HitStun
@@ -324,12 +324,21 @@ MonoBehaviour:
       - name: FireShot
         val: 0
     - start: 0
-      end: 6.448454
+      end: 6
       active: 1
       script: 1
       parameters:
       - name: 
         val: -3
+    - start: 7
+      end: 7
+      active: 1
+      script: 15
+      parameters:
+      - name: 
+        val: 0
+      - name: 
+        val: 30
     attacks:
     - start: 0
       length: 0
@@ -996,7 +1005,7 @@ MonoBehaviour:
       hitAnim: {x: 0, y: 0}
       knockback: {x: 3, y: 3, z: 0}
       hitBoxPos: {x: 0, y: 0, z: 0}
-      hitBoxScale: {x: 3, y: 3, z: 1}
+      hitBoxScale: {x: 2.5, y: 2.5, z: 1}
       cancelWindow: 0
     jumpReq: 0
     dashReq: 0
@@ -1058,7 +1067,7 @@ MonoBehaviour:
       hitAnim: {x: 0, y: 0}
       knockback: {x: 3, y: 3, z: 0}
       hitBoxPos: {x: 0, y: 0, z: 0}
-      hitBoxScale: {x: 3, y: 3, z: 1}
+      hitBoxScale: {x: 2.5, y: 2.5, z: 1}
       cancelWindow: 0
     jumpReq: 0
     dashReq: 0
@@ -1161,7 +1170,7 @@ MonoBehaviour:
       hitAnim: {x: 0, y: 0}
       knockback: {x: 5, y: 5, z: 0}
       hitBoxPos: {x: 0, y: 0, z: 0}
-      hitBoxScale: {x: 3, y: 3, z: 1}
+      hitBoxScale: {x: 2, y: 2, z: 1}
       cancelWindow: 0
     jumpReq: 0
     dashReq: 0
@@ -1350,10 +1359,12 @@ MonoBehaviour:
     - name: Index
       val: 0
   - index: 0
-    name: SpawnTurret
+    name: Invulnerability
     parameters:
-    - name: turretIndex
-      val: 3
+    - name: Flash
+      val: 5
+    - name: Frames
+      val: 60
   - index: 0
     name: AngledBullet
     parameters:
@@ -1388,7 +1399,7 @@ MonoBehaviour:
           input: 0
           state: 0
           inputs: 
-        followUps: 010000000300000004000000050000000600000007000000
+        followUps: 0100000003000000040000000500000006000000070000000800000009000000
         strict: 0
         myRect:
           serializedVersion: 2
@@ -1504,14 +1515,46 @@ MonoBehaviour:
         strict: 0
         myRect:
           serializedVersion: 2
-          x: 439
-          y: 208
+          x: 344
+          y: 270
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 8
+        command:
+          motionCommand: 0
+          input: 6
+          state: 16
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 462
+          y: 215
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 9
+        command:
+          motionCommand: 0
+          input: 7
+          state: 8
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 460
+          y: 166
           width: 175
           height: 50
         activated: 1
         priority: 0
       omitList: 02000000
-      nextFollowups: 010000000300000004000000050000000600000007000000
+      nextFollowups: 0100000003000000040000000500000006000000070000000800000009000000
     - stateName: Aerial
       aerial: 1
       explicitState: 0
@@ -1612,7 +1655,7 @@ MonoBehaviour:
           input: 0
           state: 0
           inputs: 
-        followUps: 010000000400000005000000060000000700000008000000
+        followUps: 010000000400000005000000060000000700000008000000090000000a000000
         strict: 0
         myRect:
           serializedVersion: 2
@@ -1696,8 +1739,8 @@ MonoBehaviour:
         strict: 0
         myRect:
           serializedVersion: 2
-          x: 309
-          y: 198
+          x: 313
+          y: 199
           width: 175
           height: 50
         activated: 1
@@ -1744,14 +1787,46 @@ MonoBehaviour:
         strict: 0
         myRect:
           serializedVersion: 2
-          x: 460
-          y: 218
+          x: 403
+          y: 286
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 9
+        command:
+          motionCommand: 0
+          input: 6
+          state: 17
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 494
+          y: 245
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 10
+        command:
+          motionCommand: 0
+          input: 7
+          state: 9
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 496
+          y: 192
           width: 175
           height: 50
         activated: 1
         priority: 0
       omitList: 0200000003000000
-      nextFollowups: 010000000400000005000000060000000700000008000000
+      nextFollowups: 010000000400000005000000060000000700000008000000090000000a000000
     - stateName: Aerial
       aerial: 1
       explicitState: 0
@@ -1852,7 +1927,7 @@ MonoBehaviour:
           input: 0
           state: 0
           inputs: 
-        followUps: 010000000400000005000000060000000700000008000000
+        followUps: 010000000400000005000000060000000700000008000000090000000a000000
         strict: 0
         myRect:
           serializedVersion: 2
@@ -1984,14 +2059,46 @@ MonoBehaviour:
         strict: 0
         myRect:
           serializedVersion: 2
-          x: 504
-          y: 210
+          x: 412
+          y: 289
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 9
+        command:
+          motionCommand: 0
+          input: 6
+          state: 17
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 503
+          y: 236
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 10
+        command:
+          motionCommand: 0
+          input: 7
+          state: 9
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 492
+          y: 190
           width: 175
           height: 50
         activated: 1
         priority: 0
       omitList: 0200000003000000
-      nextFollowups: 010000000400000005000000060000000700000008000000
+      nextFollowups: 010000000400000005000000060000000700000008000000090000000a000000
     - stateName: Aerial
       aerial: 1
       explicitState: 0
@@ -2092,7 +2199,7 @@ MonoBehaviour:
           input: 0
           state: 0
           inputs: 
-        followUps: 010000000400000005000000060000000700000008000000
+        followUps: 010000000400000005000000060000000700000008000000090000000a000000
         strict: 0
         myRect:
           serializedVersion: 2
@@ -2224,14 +2331,46 @@ MonoBehaviour:
         strict: 0
         myRect:
           serializedVersion: 2
-          x: 494
-          y: 192
+          x: 399
+          y: 276
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 9
+        command:
+          motionCommand: 0
+          input: 6
+          state: 17
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 474
+          y: 232
+          width: 175
+          height: 50
+        activated: 1
+        priority: 0
+      - idIndex: 10
+        command:
+          motionCommand: 0
+          input: 7
+          state: 9
+          inputs: 
+        followUps: 
+        strict: 0
+        myRect:
+          serializedVersion: 2
+          x: 475
+          y: 186
           width: 175
           height: 50
         activated: 1
         priority: 0
       omitList: 0200000003000000
-      nextFollowups: 010000000400000005000000060000000700000008000000
+      nextFollowups: 010000000400000005000000060000000700000008000000090000000a000000
     - stateName: Aerial
       aerial: 1
       explicitState: 0

@@ -319,6 +319,9 @@ public class CharacterObject : MonoBehaviour, IHittable
             case 14:
                 QuickChangeForm(formIndex);
                 break;
+            case 15:
+                StartInvul(_params[0].val, _params[1].val);
+                break;
         }
     }
 
@@ -696,7 +699,7 @@ public class CharacterObject : MonoBehaviour, IHittable
             float nextHitStun = curAtk.hitStun;
             int nextDamage = curAtk.damage;
             curComboValue = curAtk.comboValue;
-            StartInvul(nextHitStop);
+            StartInvul(nextHitStop, damInvulFrames);
             bool isCrit = false;
             if (element!=null)
             {
@@ -760,11 +763,12 @@ public class CharacterObject : MonoBehaviour, IHittable
         }
     }
     private bool isInvulnerable;
-    private void StartInvul(float hitFlash)
+    [SerializeField] private float damInvulFrames = 90f;
+    private void StartInvul(float hitFlash, float iFrames)
     {
         if (invulCooldown <= 0 && (controlType != ControlType.AI && controlType != ControlType.OBJECT))
         {
-            invulCooldown = 90f;
+            invulCooldown = iFrames;
             isInvulnerable = true;
         }
         StartCoroutine(FlashWhiteDamage(hitFlash));

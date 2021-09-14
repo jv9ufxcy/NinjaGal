@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 1701620865642401568}
   - component: {fileID: 3672018394166780756}
   - component: {fileID: 7173927079097878966}
-  - component: {fileID: 6783750261280917572}
+  - component: {fileID: -8635642525394182052}
   m_Layer: 11
   m_Name: CaveBat
   m_TagString: Enemy
@@ -131,6 +131,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c25f646f1c992954fa17f4806aad8515, type: 2}
   - {fileID: 11400000, guid: f9874a88c98d37343b134cab98451721, type: 2}
   invul: []
+  damInvulFrames: 90
   attackStrings: []
   hitStunStateIndex: 3
   deathStateIndex: 4
@@ -230,8 +231,8 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &6783750261280917572
-BoxCollider2D:
+--- !u!58 &-8635642525394182052
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -244,18 +245,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 4}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!1 &2256609912673464825
 GameObject:
   m_ObjectHideFlags: 0
